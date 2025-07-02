@@ -1,0 +1,91 @@
+import logoImage from "../../assets/HeaderImage/Logo.png";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaWhatsapp,
+  FaDribbble,
+  FaBehance,
+} from "react-icons/fa";
+import {
+  LinkedIn as LinkedInIcon,
+  Pinterest as PinterestIcon,
+  GitHub as GitHubIcon,
+} from "@mui/icons-material";
+
+import { Link } from "react-router";
+import goLink from "@/utils/Function/goLink";
+
+const navItems = [
+  { path: "/home", label: "Home" },
+  { path: "/service", label: "Service" },
+  { path: "/portfolio", label: "Portfolio" },
+  { path: "/about", label: "About" },
+  { path: "/gigs", label: "Gigs" },
+  { path: "/project", label: "Project" },
+  { path: "/blogs", label: "Blog" },
+  { path: "/contact", label: "Contact" },
+];
+
+const socialLinks = [
+  { icon: <FaFacebookF />, url: "https://www.facebook.com/sarkarnayans" },
+  { icon: <FaTwitter />, url: "https://twitter.com/sarkarnayans" },
+  { icon: <FaInstagram />, url: "https://www.instagram.com/sarkarnayans/" },
+  { icon: <LinkedInIcon />, url: "https://www.linkedin.com/in/sarkarnayans/" },
+  { icon: <GitHubIcon />, url: "https://github.com/nayansarkars" },
+  { icon: <FaBehance />, url: "https://www.behance.net/sarkarnayans" },
+  { icon: <FaDribbble />, url: "https://dribbble.com/sarkarnayans" },
+  { icon: <PinterestIcon />, url: "https://www.pinterest.com/sarkarnayans" },
+  { icon: <FaWhatsapp />, url: "https://wa.me/message/V3FSQYVKY6HQL1" },
+];
+
+const Header = () => {
+  return (
+    <div className="bg-[#222222] h-[100vh] text-white pl-16 overflow-hidden sticky top-0 shadow-blue-400 shadow-md">
+      {/* Logo */}
+      <div className="mt-20 mb-28">
+        <Link to="/">
+          {/* <image src={logoImage} className="w-[70%]" /> */}
+          <img src={logoImage} alt="Sarkar Nayan" className="w-[70%]" />
+        </Link>
+      </div>
+
+      {/* Navigation */}
+      <div className="flex flex-col gap-4 font-bold">
+        {navItems.map((item) => (
+          <Link key={item.path} to={item.path}>
+            {item.label}
+          </Link>
+        ))}
+      </div>
+
+      {/* Social Icons */}
+      <div className="flex gap-4 items-center mt-8">
+        {socialLinks.map((item, index) => (
+          <Link key={index} to="" onClick={() => goLink(item.url)}>
+            {item.icon}
+          </Link>
+        ))}
+      </div>
+
+      {/* Contact Info */}
+      <div className="pt-10 text-[rgb(204,204,204)] text-[15px]">
+        <p>
+          <span className="font-bold">Email:</span> me@sarkarnayan.com
+        </p>
+        <p>
+          <span className="font-bold">Phone:</span> +88 01710847819
+        </p>
+      </div>
+
+      {/* Footer */}
+      <div className="mt-5 text-[#cccccc] text-[15px]">
+        <p>
+          Copyright ©2024 Sarkar Nayan <br /> All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  );
+};
+
+export default Header;
