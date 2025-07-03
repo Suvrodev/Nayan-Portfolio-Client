@@ -8,7 +8,8 @@ const MainLayout = () => {
       <div className="w-[20%] hidden md:block ">
         <Header />
       </div>
-      <div className="w-full md:w-[80%] bg-[#333333]">
+      {/* <div className="w-full md:w-[80%] bg-[#333333]"> */}
+      <div className="w-full md:w-[80%] ">
         <div className="hidden md:block">
           <Cursor />
         </div>
