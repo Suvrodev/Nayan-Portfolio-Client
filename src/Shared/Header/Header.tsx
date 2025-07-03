@@ -6,14 +6,12 @@ import {
   FaWhatsapp,
   FaDribbble,
   FaBehance,
+  FaGithub,
+  FaLinkedin,
+  FaPinterest,
 } from "react-icons/fa";
-import {
-  LinkedIn as LinkedInIcon,
-  Pinterest as PinterestIcon,
-  GitHub as GitHubIcon,
-} from "@mui/icons-material";
 
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import goLink from "@/utils/Function/goLink";
 
 const navItems = [
@@ -31,15 +29,17 @@ const socialLinks = [
   { icon: <FaFacebookF />, url: "https://www.facebook.com/sarkarnayans" },
   { icon: <FaTwitter />, url: "https://twitter.com/sarkarnayans" },
   { icon: <FaInstagram />, url: "https://www.instagram.com/sarkarnayans/" },
-  { icon: <LinkedInIcon />, url: "https://www.linkedin.com/in/sarkarnayans/" },
-  { icon: <GitHubIcon />, url: "https://github.com/nayansarkars" },
+  { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/sarkarnayans/" },
+  { icon: <FaGithub />, url: "https://github.com/nayansarkars" },
   { icon: <FaBehance />, url: "https://www.behance.net/sarkarnayans" },
   { icon: <FaDribbble />, url: "https://dribbble.com/sarkarnayans" },
-  { icon: <PinterestIcon />, url: "https://www.pinterest.com/sarkarnayans" },
+  { icon: <FaPinterest />, url: "https://www.pinterest.com/sarkarnayans" },
   { icon: <FaWhatsapp />, url: "https://wa.me/message/V3FSQYVKY6HQL1" },
 ];
 
 const Header = () => {
+  const location = useLocation()?.pathname;
+  // console.log("Location: ", location);
   return (
     <div className="bg-[#222222] h-[100vh] text-white pl-16 overflow-hidden sticky top-0 shadow-blue-400 shadow-md">
       {/* Logo */}
@@ -53,7 +53,11 @@ const Header = () => {
       {/* Navigation */}
       <div className="flex flex-col gap-4 font-bold">
         {navItems.map((item) => (
-          <Link key={item.path} to={item.path}>
+          <Link
+            key={item.path}
+            to={item.path}
+            className={` ${location == item?.path ? "text-green-500" : ""}`}
+          >
             {item.label}
           </Link>
         ))}
@@ -62,7 +66,12 @@ const Header = () => {
       {/* Social Icons */}
       <div className="flex gap-4 items-center mt-8">
         {socialLinks.map((item, index) => (
-          <Link key={index} to="" onClick={() => goLink(item.url)}>
+          <Link
+            key={index}
+            to=""
+            onClick={() => goLink(item.url)}
+            className="size-2 hover:scale-150 transition-all"
+          >
             {item.icon}
           </Link>
         ))}
