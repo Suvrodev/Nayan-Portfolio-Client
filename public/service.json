@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "title": "WordPress Development",
+    "image": "https://i.ibb.co/KK7gWVC/wordpress-development-sarkarnayan.jpg",
+    "popupDesc": "Our WordPress development service is your pathway to a dynamic and tailored online presence. Our team of skilled developers specializes in creating custom WordPress solutions that align with your unique goals and requirements. From responsive design to performance optimization and seamless functionality, we ensure your website stands out and performs exceptionally in the digital landscape. Elevate your online presence with our WordPress development service and stay ahead of the competition.",
+    "desc": "WordPress development refers to the creation of websites, themes, and plugins using the WordPress content management system. its flexibility, user-friendly, and extensive plugin."
+  },
+  {
+    "id": 2,
+    "title": "Web Design",
+    "image": " https://i.ibb.co/GRH2YQr/web-design-sarkarnayan.jpg",
+    "popupDesc": "Web designers use technical and creative skills to design visually appealing, user-friendly websites aligned with the website owner’s or organization’s goals. They consider factors such as user experience, branding, navigation, and accessibility while designing the website.Our Responsive Web Design service is dedicated to creating websites that seamlessly adapt to different screen sizes, ensuring optimal user experiences across devices",
+    "desc": "Website design refers to the process of creating and designing the visual layout, user interface, and overall aesthetic appearance of a website.  Front-end development"
+  },
+  {
+    "id": 3,
+    "title": "Web Development",
+    "image": "https://i.ibb.co/7YZ90YR/web-development-sarkarnayan.jpg",
+    "popupDesc": "Web development refers to creating and building websites or web applications. It involves using programming languages, frameworks, and various technologies to develop a website’s functional and interactive components.Back-End Development: Back-end developers work on the server side of web development. They handle the logic, database management, and server configuration that power the website. Back-end developers use languages such as PHP, Laravel to create the functionality and handle data processing.",
+    "desc": "Web development is the process of creating websites or web applications. Front-end development and Back-end development. design is user-friendly, and aligned."
+  },
+  {
+    "id": 4,
+    "title": "Ui Ux Design",
+    "image": "https://i.ibb.co/b5PtT3w/ui-ux-design-sarkarnayan.jpg",
+    "popupDesc": "UI design crafts the visual aspects of a digital interface, including buttons, icons, fonts, and color patterns. It strives to produce attractive, intuitive interfaces for an optimal user experience. While shaping interfaces for websites, apps, or other platforms, UI designers weigh branding, usability, and accessibility..",
+    "desc": "UI UX Design combines various disciplines to create visually appealing, efficient, and user-friendly interfaces for digital products, enhancing user experiences."
+  },
+  {
+    "id": 5,
+    "title": "Graphic Design",
+    "image": "https://i.ibb.co/prkspcw/graphic-design-sarkarnayan.jpg",
+    "popupDesc": "Graphics design is a creative discipline that involves visually communicating ideas, concepts, or messages through the use of typography, images, colors, and other visual elements. It encompasses various mediums such as digital design, print design, branding, advertising, web design, and more.",
+    "desc": "Graphics design is the art of visual communication, creating visually appealing and impactful designs for various mediums such as print, digital."
+  },
+
+  {
+    "id": 6,
+    "title": "Search Engine Optimization",
+    "image": "https://i.ibb.co/z27PvJw/search-engine-optimization-sarkarnayan.jpg",
+    "popupDesc": "Sarkar Nayan offers the best search engine optimization services to boost your web page’s ranking on the first page of Google or any search engine. We promise to deliver consistently. There are no shortcuts or quick fixes in SEO.",
+    "desc": "Boost your online presence with our specialized Search Engine Optimization services (SEO). Drive traffic, improve search rankings, and increase visibility effectively."
+  }
+]

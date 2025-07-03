@@ -1,0 +1,23 @@
+[
+    {
+        "id":1,
+        "title":"Years of Service",
+        "number":6,
+        "after":"",
+        "botText":"Wish us on 17 May"
+    },
+    {
+        "id":2,
+        "title":"Team Members",
+        "number":2,
+        "after":"",
+         "botText":"Sarkar Nayan, Chinmoy Sarkar"
+    },
+    {
+        "id":3,
+        "title":"Happy Clients",
+        "number":250,
+        "after":"",
+        "botText":"Be the 280th"
+    }
+]

@@ -1,0 +1,41 @@
+[
+    {
+        "id":1,
+        "title":"Business Card",
+        "price":"60",
+        "conceptsIncluded":"4",
+        "sourceFile":"Yes",
+        "printableFile":"Yes",
+        "psdFile":"Yes",
+        "doubleSided":"Yes",
+        "allFile":" Yes (IF you need)",
+        "revisions":"7",
+        "deliveryTime":"4 days"
+    },
+    {
+        "id":2,
+        "title":"Flyer or Brochure",
+        "price":"85",
+        "conceptsIncluded":"1",
+        "sourceFile":"Yes",
+        "printableFile":"Yes",
+        "psdFile":"Yes (Flyer)",
+        "doubleSided":"Yes",
+        "allFile":" Yes (Brochure)",
+        "revisions":"7",
+        "deliveryTime":"3 days"
+    },
+    {
+        "id":3,
+        "title":"Logo design",
+        "price":"140",
+        "conceptsIncluded":"2",
+        "logoTransparency":"Yes",
+        "vectorFile":"Yes",
+        "threeDMockup":"Yes",
+        "sourceFile":"No",
+        "socialMediaKit":"NO",
+        "revisions":"unlimited",
+        "deliveryTime":"2 days"
+    }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Wordpress Development",
+    "image": "https://i.ibb.co/QDmTm77/Word-Press.png",
+    "text": "WordPress development refers to the creation of websites, themes, and pluginsusing the WordPress content managementsystem. its flexibility, user-friendly, and extensive plugin."
+  },
+  {
+    "id": 2,
+    "title": "Web Design",
+    "image": "https://i.ibb.co/9yGq78b/Web-Design.png",
+    "text": "Website design refers to the process of creating and designing the visual layout, user interface, and overall aesthetic appearance of a website. Front-end development."
+  },
+  {
+    "id": 3,
+    "title": "Web Development",
+    "image": "https://i.ibb.co/9yGq78b/Web-Design.png",
+    "text": "Web development is the process of creating websites or web applications. Front-end development and Back-end development.design is user-friendly, and aligned."
+  },
+  {
+    "id": 4,
+    "title": "UI UX Design",
+    "image": "https://i.ibb.co/JCqLP4c/ui-ux-design.png",
+    "text": "UI UX Design combines various disciplines to create visually appealing, efficient, and user-friendly interfaces for digital products, enhancing user experiences."
+  },
+  {
+    "id": 5,
+    "title": "Graphic Design",
+    "image": "https://i.ibb.co/7S6kDm4/Graphics-Design.png",
+    "text": "Graphics design is the art of visual communication, creating visually appealing and impactful designs for various mediums such as print, digital."
+  },
+  {
+    "id": 6,
+    "title": "Search Engine Optimization",
+    "image": "https://i.ibb.co/jzf6fh0/SEO.png",
+    "text": "Boost your online presence with our specialized Search Engine Optimization services (SEO). Drive traffic, improve search rankings, and increase visibility effectively."
+  }
+]
