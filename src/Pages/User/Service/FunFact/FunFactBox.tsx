@@ -16,7 +16,7 @@ const FunFactBox = ({ fun }: IProps) => {
 
   return (
     <div
-      className="flex items-center justify-center border-[1px] gap-4 p-10"
+      className="flex items-center justify-center border-[1px] gap-4 bg-[#292929] p-10"
       ref={ref}
     >
       <div className="flex flex-col gap-8">

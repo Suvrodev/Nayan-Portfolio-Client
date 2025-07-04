@@ -8,17 +8,15 @@ interface IProps {
 
 const HomeServiceDesign = ({ service, idx }: IProps) => {
   const cId = idx + 1;
-  const { title, text } = service;
+  const { title, desc } = service;
 
   return (
     <div className="relative">
       <div className={`flex gap-10 ${cId % 2 == 0 ? "" : "flex-row-reverse"} `}>
         {/* <div className="grid grid-cols-[48%_auto_48%] gap-10 items-center "> */}
-        <div
-          className={`perSide   relative bg-[#292929] p-4 rounded-[10px] border-[1px] border-[#525252] backdrop-blur-[200px]`}
-        >
+        <div className={`perSide   relative  p-4 rounded-[10px] `}>
           <h1 className="perTitle  ">{title}</h1>
-          <p className="text-justify leading-[30px] ">{text}</p>{" "}
+          <p className="text-justify leading-[30px] ">{desc}</p>{" "}
           <span>Read More..</span>
           <div className="z-10">
             <p

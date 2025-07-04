@@ -1,4 +1,4 @@
-import Cursor from "@/Components/Cursor/Cursor";
+import Cursor from "@/components/Cursor/Cursor";
 import WeAccept from "@/Pages/User/Home/WeAccept/WeAccept";
 import Header from "@/Shared/Header/Header";
 import { Outlet } from "react-router";

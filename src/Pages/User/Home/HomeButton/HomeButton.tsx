@@ -1,6 +1,6 @@
 import "./HomeButton.css";
 import samplePDF from "../../../../assets/CV/sample.pdf";
-import PrimaryButton from "@/Components/Button/PrimaryButton";
+import PrimaryButton from "@/components/PortfolioButton/PrimaryButton";
 
 const HomeButton = () => {
   const handleDownloadCV = () => {

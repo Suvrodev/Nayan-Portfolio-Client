@@ -1,5 +1,5 @@
 import "./Contact.css";
-import LinkBox from "@/Components/LinkBox/LinkBox";
+import LinkBox from "@/components/LinkBox/LinkBox";
 import goLink from "@/utils/Function/goLink";
 import { useTitle } from "@/utils/hook/useTitle";
 import {

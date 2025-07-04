@@ -1,8 +1,9 @@
 export type TServcie = {
-  id: number;
-  image?: string;
+  _id: number;
   title: string;
-  text: string;
+  image: string;
+  popupDesc: string;
+  desc: string;
 };
 
 export type TTestimonial = {

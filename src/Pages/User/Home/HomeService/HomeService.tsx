@@ -4,7 +4,7 @@ import HomeServiceDesign from "./HomeServiceDesign/HomeServiceDesign";
 const HomeService = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("/homeService.json")
+    fetch("/service.json")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);

@@ -4,7 +4,6 @@ import HomeButton from "./HomeButton/HomeButton";
 import homeImage from "../../../assets/homeImage/sarkar_nayan_home.jpg";
 import HomeService from "./HomeService/HomeService";
 import Testimonial from "./Testimonial/Testimonial";
-// import WeAccept from "./WeAccept/WeAccept";
 
 const Home = () => {
   const divStyle = {
@@ -38,6 +37,7 @@ const Home = () => {
               innovative, and scalable code to drive the success of your team
               and projects.
             </p>
+
             <div className="flex gap-4 items-center">
               <HomeButton />
             </div>
@@ -52,9 +52,6 @@ const Home = () => {
         <div className="p-4 md:px-10 md:py-20 bg-[#141414] ">
           <Testimonial />
         </div>
-        {/* <div className="bg-[#222222] p-20">
-          <WeAccept />
-        </div> */}
       </div>
     </div>
   );
