@@ -1,0 +1,10 @@
+.imageBox {
+  /* background-image: url('../../../assets/bgImage/Bg-1.jpg'); */
+  /* background-image: url('../../../assets/bgImage/Bg-4.jpg'); */
+  background-image: url("../../../../assets/bgImage/Bg-4.jpg");
+  width: 100%;
+  height: 450px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}

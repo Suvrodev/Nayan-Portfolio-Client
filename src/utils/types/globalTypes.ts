@@ -13,3 +13,8 @@ export type TTestimonial = {
   position: string;
   rating: number;
 };
+export type TFun = {
+  number: number;
+  title: string;
+  botText: string;
+};
