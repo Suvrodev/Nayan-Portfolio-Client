@@ -4,7 +4,7 @@ import HomeButton from "./HomeButton/HomeButton";
 import homeImage from "../../../assets/homeImage/sarkar_nayan_home.jpg";
 import HomeService from "./HomeService/HomeService";
 import Testimonial from "./Testimonial/Testimonial";
-import WeAccept from "./WeAccept/WeAccept";
+// import WeAccept from "./WeAccept/WeAccept";
 
 const Home = () => {
   const divStyle = {
@@ -28,7 +28,7 @@ const Home = () => {
             <h1 className="text-white text-[30px]  lg:text-[55px] font-bold uppercase">
               Sarkar Nayan
             </h1>
-            <p className="text-[20px] c px15 f500 leading-[30px]">
+            <p className="text-[20px]  leading-[30px]">
               Highly motivated and detail-oriented Web Developer with a
               Bachelor's degree in Computer Science and Engineering for 4 years.
               Proficient in PHP, with a deep understanding of the Laravel
@@ -46,15 +46,15 @@ const Home = () => {
       </div>
 
       <div className="">
-        <div className="my-28 w-full  mx-auto flex flex-col gap-20 p-4 md:px-[200px] md:py-28 bg-[#222222]">
+        <div className="my-28 w-full  mx-auto flex flex-col gap-20 p-4 md:px-[200px] md:py-28 ">
           <HomeService />
         </div>
-        <div className="p-4 md:px-10 md:py-20 ">
+        <div className="p-4 md:px-10 md:py-20 bg-[#141414] ">
           <Testimonial />
         </div>
-        <div className="bg-[#222222] p-20">
+        {/* <div className="bg-[#222222] p-20">
           <WeAccept />
-        </div>
+        </div> */}
       </div>
     </div>
   );

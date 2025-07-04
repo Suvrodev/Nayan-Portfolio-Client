@@ -11,13 +11,9 @@ const HomeService = () => {
 
   return (
     <div>
-      <div className="flex flex-col  justify-center  ">
+      <div className="flex flex-col  justify-center gap-y-4 md:gap-y-0 ">
         {services.map((service, idx) => (
-          <HomeServiceDesign
-            key={idx}
-            idx={idx}
-            service={service}
-          ></HomeServiceDesign>
+          <HomeServiceDesign key={idx} idx={idx} service={service} />
         ))}
       </div>
     </div>

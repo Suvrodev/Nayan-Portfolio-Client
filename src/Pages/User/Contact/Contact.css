@@ -1,0 +1,33 @@
+.pageTitle {
+  font-size: 32px;
+  color: white;
+  font-weight: 700;
+}
+
+.topicTitle {
+  font-size: 28px;
+  color: white;
+  font-weight: 700;
+}
+.dag {
+  height: 0px;
+  border: 2px solid #474747;
+  border-top: 0;
+  /* background-color: white; */
+}
+
+.pageMargin {
+  margin: 112px;
+}
+.pagePadding {
+  margin: 112px;
+}
+
+@media screen and (max-width: 576px) {
+  .pageMargin {
+    margin: 20px;
+  }
+  .pagePadding {
+    margin: 20px;
+  }
+}

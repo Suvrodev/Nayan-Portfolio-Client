@@ -1,4 +1,5 @@
 import Cursor from "@/Components/Cursor/Cursor";
+import WeAccept from "@/Pages/User/Home/WeAccept/WeAccept";
 import Header from "@/Shared/Header/Header";
 import { Outlet } from "react-router";
 
@@ -15,6 +16,10 @@ const MainLayout = () => {
         </div>
         <div className="md:hidden">{/* <MobileHeader /> */}</div>
         <Outlet />
+
+        <div className="bg-[#222222] p-20">
+          <WeAccept />
+        </div>
       </div>
     </div>
   );

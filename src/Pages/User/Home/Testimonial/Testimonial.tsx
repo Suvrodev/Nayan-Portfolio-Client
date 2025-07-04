@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./Testimonial.css";
 import TestimonialCard from "./TestimonialCard/TestimonialCard";
-import TestimonialBox from "./TestimonialBox/TestimonialBox";
+// import TestimonialBox from "./TestimonialBox/TestimonialBox";
 
 const images = [
   "https://i.ibb.co/xsV2S00/Brand-3-150x150.webp",
@@ -96,13 +96,13 @@ const Testimonial = () => {
         </div>
       </div>
 
-      <div className="mt-36 md:mt-0">
+      {/* <div className="mt-36 md:mt-0">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-24">
           {testimonials.map((testimonial, index) => (
             <TestimonialBox key={index} testimonial={testimonial} />
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

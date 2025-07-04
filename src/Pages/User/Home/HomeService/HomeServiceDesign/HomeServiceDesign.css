@@ -5,6 +5,11 @@
   gap: 1.25rem;
   align-items: flex-end;
   margin: 0;
+  /* background-color: #292929;
+  padding: 10px;
+  border: 1px solid #525252;
+  border-radius: 10px;
+  box-sizing: border-box; */
 }
 .perTitle {
   font-size: 1.25rem;

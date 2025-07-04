@@ -41,7 +41,7 @@ const Header = () => {
   const location = useLocation()?.pathname;
   // console.log("Location: ", location);
   return (
-    <div className="bg-[#222222] h-[100vh] text-white pl-16 overflow-hidden sticky top-0 shadow-blue-400 shadow-md">
+    <div className="bg-[#141414] h-[100vh] text-white pl-16 overflow-hidden sticky top-0 shadow-blue-400 shadow-md">
       {/* Logo */}
       <div className="mt-20 mb-28">
         <Link to="/">
