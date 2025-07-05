@@ -27,7 +27,7 @@ const About = () => {
         <div className="my-10">
           <h1 className=" topicTitle">Sarkar Nayan</h1>
           <p className="font-bold">
-            Web Designer & Developer, Graphics & UI UX designer.
+            Web Designer & Developer, Graphics & UI UX designer.
           </p>
         </div>
 

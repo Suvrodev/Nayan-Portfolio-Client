@@ -50,7 +50,7 @@ const Home = () => {
           <HomeService />
         </div>
         <div className="p-4 md:px-10 md:py-20 bg-[#141414] ">
-          <Testimonial />
+          <Testimonial showBox={false} />
         </div>
       </div>
     </div>
