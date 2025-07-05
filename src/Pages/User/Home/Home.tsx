@@ -4,6 +4,8 @@ import HomeButton from "./HomeButton/HomeButton";
 import homeImage from "../../../assets/homeImage/sarkar_nayan_home.jpg";
 import HomeService from "./HomeService/HomeService";
 import Testimonial from "./Testimonial/Testimonial";
+import { useTitle } from "@/utils/hook/useTitle";
+import Certificate from "./Certificate/Certificate";
 
 const Home = () => {
   const divStyle = {
@@ -11,6 +13,8 @@ const Home = () => {
     backgroundSize: "cover",
     backgroundPosition: "center",
   };
+
+  useTitle("Home");
 
   return (
     <div className="overflow-hidden">
@@ -53,6 +57,9 @@ const Home = () => {
         </div>
         <div className="p-4 md:px-10 md:py-20 bg-[#141414] ">
           <Testimonial showBox={false} />
+        </div>
+        <div className="p-4 md:px-10 md:py-20  ">
+          <Certificate />
         </div>
       </div>
     </div>
