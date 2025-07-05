@@ -13,17 +13,7 @@ import {
 
 import { Link, useLocation } from "react-router";
 import goLink from "@/utils/Function/goLink";
-
-const navItems = [
-  { path: "/home", label: "Home" },
-  { path: "/service", label: "Service" },
-  { path: "/portfolio", label: "Portfolio" },
-  { path: "/about", label: "About" },
-  { path: "/gigs", label: "Gigs" },
-  { path: "/project", label: "Project" },
-  { path: "/blogs", label: "Blog" },
-  { path: "/contact", label: "Contact" },
-];
+import { navItems } from "@/utils/Array/navItems";
 
 const socialLinks = [
   { icon: <FaFacebookF />, url: "https://www.facebook.com/sarkarnayans" },
