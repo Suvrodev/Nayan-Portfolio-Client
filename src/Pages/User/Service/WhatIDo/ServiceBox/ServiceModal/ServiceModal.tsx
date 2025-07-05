@@ -27,16 +27,17 @@ const ServiceModal = ({ image, popupDesc }: IProps) => {
         </div>
       </DialogTrigger>
 
-      <DialogContent className="sm:max-w-2xl max-w-[95vw] p-6 [&>button[aria-label='Close']]:hidden">
+      {/* <DialogContent className="sm:max-w-2xl max-w-[95vw] p-6 [&>button[aria-label='Close']]:hidden"> */}
+      <DialogContent className="sm:max-w-2xl max-w-[95vw] p-6 ">
         {/* 🔴 Close Icon with Red Background */}
-        <DialogClose asChild>
+        {/* <DialogClose asChild>
           <button
             className="absolute right-[12px] top-4 bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg z-10 cursor-pointer"
             aria-label="custom-close" // ✅ make it unique
           >
             ✕
           </button>
-        </DialogClose>
+        </DialogClose> */}
 
         <div className="flex flex-col gap-4">
           {/* 🔺 Image Section */}

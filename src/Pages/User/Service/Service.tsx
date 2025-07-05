@@ -1,8 +1,8 @@
 import LinkBox from "@/components/LinkBox/LinkBox";
 import { useTitle } from "@/utils/hook/useTitle";
 import Consult from "./Consult/Consult";
-import FunFact from "./FunFact/FunFact";
 import WhatIDo from "./WhatIDo/WhatIDo";
+import PricingList from "./PricingList/PricingList";
 
 const Service = () => {
   useTitle("Service");
@@ -20,12 +20,12 @@ const Service = () => {
       <div>
         <Consult />
       </div>
-      {/* <div className="p-5 md:p-28">
+      <div className="p-5 md:p-28">
         <PricingList />
-      </div> */}
-      <div className="pageMargin">
-        <FunFact />
       </div>
+      {/* <div className="pageMargin">
+        <FunFact />
+      </div> */}
     </div>
   );
 };
