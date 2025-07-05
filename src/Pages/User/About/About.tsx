@@ -19,7 +19,7 @@ const About = () => {
         <h1 className="my-10 pageTitle">About Me</h1>
 
         <img
-          className="h-[200px] md:h-[650px] w-full"
+          className="h-[200px] md:h-[650px] w-full object-cover "
           src={aboutImage}
           alt=""
         />
@@ -32,7 +32,7 @@ const About = () => {
         </div>
 
         <div className="dag"></div>
-        <div className="text-[18px] my-10">
+        <div className="text-[18px] my-10 ">
           <p>
             Highly motivated and detail-oriented Web Developer with a Bachelor's
             degree in Computer Science and Engineering for 4 years. Proficient
@@ -56,11 +56,12 @@ const About = () => {
         </div>
       </div>
 
-      <div className="p-5 md:p-28 bg-[#222222]">
+      {/* <div className="p-5 md:p-28 bg-[#222222]"> */}
+      <div className="pagePadding bg-[#222222]">
         <SkillLoading />
       </div>
 
-      <div className="p-5 md:px-28 py-20">
+      <div className="pagePadding">
         <KnowladgeInterest />
       </div>
 

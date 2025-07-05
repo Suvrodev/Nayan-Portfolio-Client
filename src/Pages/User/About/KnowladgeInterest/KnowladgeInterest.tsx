@@ -16,7 +16,7 @@ const KnowladgeInterest = () => {
   return (
     <div>
       <div className="flex flex-col md:flex-row ">
-        <div className="w-full md:w-6/12  ">
+        <div className="w-full md:w-1/2  ">
           <h1 className="text-xl text-white font-bold my-10">Knowledges</h1>
           {knowladges.map((knowladge, idx) => (
             <p key={idx} className="c text-[18px] mb-2">
@@ -26,7 +26,7 @@ const KnowladgeInterest = () => {
           ))}
         </div>
 
-        <div className="w-full md:w-6/12 ">
+        <div className="w-full md:w-1/2  ">
           {" "}
           <h1 className="text-xl text-white font-bold my-10">Ineterests</h1>
           {interests.map((knowladge, idx) => (

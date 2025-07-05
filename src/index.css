@@ -1,3 +1,7 @@
+/* Font Start */
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@700&display=swap");
+/* Font End */
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -159,3 +163,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Font Class start */
+@layer utilities {
+  .fontHeading {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+
+  .fontBody {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+  }
+}
+/* Font Class end */

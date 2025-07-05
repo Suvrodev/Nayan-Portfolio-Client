@@ -13,9 +13,11 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <div className="flex justify-center items-center mt-10 md:mt-60 w-full p-4 md:p-0">
+        {/* <div className="flex justify-center items-center pageMargin bg-green-400"> */}
         <div className="flex flex-col md:flex-row gap-10 w-full md:w-[75%] ">
+          {/* <div className="flex flex-col md:flex-row gap-10"> */}
           <div className="">
             <div
               className="abs_img  border-8 border-[#cccccc] w-[250px] h-[250px] md:w-[350px] md:h-[350px] mx-auto"

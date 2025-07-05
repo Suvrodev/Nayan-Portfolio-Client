@@ -20,7 +20,8 @@ const Service = () => {
       <div>
         <Consult />
       </div>
-      <div className="p-5 md:p-28">
+      {/* <div className="p-5 md:p-28"> */}
+      <div className="pageMargin">
         <PricingList />
       </div>
       {/* <div className="pageMargin">

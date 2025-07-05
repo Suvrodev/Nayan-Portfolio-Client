@@ -117,7 +117,7 @@ const PriceBox = ({ p }: { p: any }) => {
     allItems.push(item);
   }
   return (
-    <div className="serviceBox rounded-[4px] p-5  relative">
+    <div className="primaryBox rounded-[4px] p-5  relative">
       <div>
         <h1 className="text-center text-2xl font-bold mt-16">{title}</h1>
 

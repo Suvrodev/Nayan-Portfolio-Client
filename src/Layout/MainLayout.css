@@ -25,7 +25,7 @@
   margin: 112px;
 }
 .pagePadding {
-  margin: 112px;
+  padding: 112px;
 }
 
 @media screen and (max-width: 576px) {
@@ -33,6 +33,6 @@
     margin: 20px;
   }
   .pagePadding {
-    margin: 20px;
+    padding: 20px;
   }
 }
