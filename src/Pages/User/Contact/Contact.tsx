@@ -38,7 +38,8 @@ const Contact = () => {
     //   </div>
     // </div>
 
-    <div className="overflow-hidden bg-gradient-to-br from-black to-gray-900">
+    // <div className="overflow-hidden bg-gradient-to-br from-black to-gray-900">
+    <div className="overflow-hidden ">
       <div className="min-h-screen  pageMargin">
         <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
           {/* Left Side - Contact Info */}

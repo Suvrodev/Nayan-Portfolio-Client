@@ -8,6 +8,7 @@ import SkillLoading from "./SkillLoading/SkillLoading";
 import KnowladgeInterest from "./KnowladgeInterest/KnowladgeInterest";
 import EducationExperience from "./EducationExperience/EducationExperience";
 import Testimonial from "../Home/Testimonial/Testimonial";
+import SmartImage from "@/components/SmartImage/SmartImage";
 
 const About = () => {
   useTitle("About");
@@ -18,10 +19,16 @@ const About = () => {
         {/* <h1 className="my-10 text-3xl text-white font-bold">About Me</h1> */}
         <h1 className="my-10 pageTitle">About Me</h1>
 
-        <img
+        {/* <img
           className="h-[200px] md:h-[650px] w-full object-cover "
           src={aboutImage}
           alt=""
+        /> */}
+
+        <SmartImage
+          src={aboutImage} // or base64 string
+          alt="My Image"
+          className="h-[200px] md:h-[650px] w-full object-cover"
         />
 
         <div className="my-10">
