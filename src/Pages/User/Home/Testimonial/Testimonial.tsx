@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./Testimonial.css";
 import TestimonialCard from "./TestimonialCard/TestimonialCard";
+import TestimonialBox from "./TestimonialBox/TestimonialBox";
 // import TestimonialBox from "./TestimonialBox/TestimonialBox";
 
 const images = [
@@ -11,7 +12,7 @@ const images = [
   "https://i.ibb.co/H2bx8KP/JPEG-20210320-203703-5456959541357686078-150x150.webp",
 ];
 
-const Testimonial = () => {
+const Testimonial = ({ showBox }: { showBox: boolean }) => {
   const [testimonials, setTestimonials] = useState([]);
   useEffect(() => {
     fetch("/testimonial.json")
@@ -96,13 +97,15 @@ const Testimonial = () => {
         </div>
       </div>
 
-      {/* <div className="mt-36 md:mt-0">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-24">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialBox key={index} testimonial={testimonial} />
-          ))}
+      {showBox && (
+        <div className="mt-36 md:mt-0">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-24">
+            {testimonials.map((testimonial, index) => (
+              <TestimonialBox key={index} testimonial={testimonial} />
+            ))}
+          </div>
         </div>
-      </div> */}
+      )}
     </div>
   );
 };

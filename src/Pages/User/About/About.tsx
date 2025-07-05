@@ -4,6 +4,10 @@ import aboutImage from "../../../assets/aboutImage/sarkar_nayan_about.jpg";
 import { useTitle } from "@/utils/hook/useTitle";
 import BioData from "./BioData/BioData";
 import DownloadCV from "./DownloadCV/DownloadCV";
+import SkillLoading from "./SkillLoading/SkillLoading";
+import KnowladgeInterest from "./KnowladgeInterest/KnowladgeInterest";
+import EducationExperience from "./EducationExperience/EducationExperience";
+import Testimonial from "../Home/Testimonial/Testimonial";
 
 const About = () => {
   useTitle("About");
@@ -52,7 +56,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* <div className="p-5 md:p-28 bg-[#222222]">
+      <div className="p-5 md:p-28 bg-[#222222]">
         <SkillLoading />
       </div>
 
@@ -60,18 +64,13 @@ const About = () => {
         <KnowladgeInterest />
       </div>
 
-     
       <div className="bg-[#222222] px-5 py-20 ">
         <EducationExperience />
       </div>
 
       <div className="p-4 md:px-10 md:py-20 ">
-        <Testimonial />
+        <Testimonial showBox={true} />
       </div>
-
-      <div className=" px-10 py-20 bg-black ">
-        <WeeAccept />
-      </div> */}
     </div>
   );
 };

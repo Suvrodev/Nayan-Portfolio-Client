@@ -19,3 +19,9 @@ export type TFun = {
   title: string;
   botText: string;
 };
+
+export type TEducation = {
+  year: string;
+  institute: string;
+  topic: string;
+};
