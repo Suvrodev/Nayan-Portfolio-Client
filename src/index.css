@@ -166,14 +166,78 @@
 
 /* Font Class start */
 @layer utilities {
-  .fontHeading {
+  /* ---------- Headings ---------- */
+  .font-h1 {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+
+    @media (min-width: 768px) {
+      font-size: 40px;
+      line-height: 48px;
+    }
   }
 
-  .fontBody {
+  .font-h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+
+    @media (min-width: 768px) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+
+  .font-h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+
+    @media (min-width: 768px) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  .font-h4 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+
+    @media (min-width: 768px) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  /* ---------- Body Text ---------- */
+  .font-body {
     font-family: "Inter", sans-serif;
     font-weight: 400;
+    font-size: 14px;
+
+    @media (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  /* ---------- Small / Caption ---------- */
+  .font-caption {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+
+    @media (min-width: 768px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 }
+
 /* Font Class end */

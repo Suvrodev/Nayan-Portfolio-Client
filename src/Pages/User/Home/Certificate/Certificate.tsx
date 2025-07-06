@@ -82,7 +82,7 @@ const Certificate = () => {
     // </div>
 
     <div>
-      <Marquee>
+      <Marquee pauseOnHover={true} autoFill={true}>
         {certificateImages.map((item, idx) => (
           <div key={idx} className="flex-shrink-0 w-full ">
             <div className="bg-[#1f1f1f] p-4 rounded-lg shadow text-center">

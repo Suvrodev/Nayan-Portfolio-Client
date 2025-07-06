@@ -18,9 +18,10 @@ const Home = () => {
 
   return (
     <div className="overflow-hidden">
-      <div className="flex justify-center items-center mt-10 md:mt-60 w-full p-4 md:p-0">
+      {/* <div className="flex justify-center items-center mt-10 md:mt-60 w-full p-4 md:p-0 bg-yellow-400"> */}
+      <div className="flex justify-center items-center pagePadding w-full p-4 md:p-0 min-h-screen ">
         {/* <div className="flex justify-center items-center pageMargin bg-green-400"> */}
-        <div className="flex flex-col md:flex-row gap-10 w-full md:w-[75%] ">
+        <div className="flex flex-col md:flex-row gap-10 w-full ">
           {/* <div className="flex flex-col md:flex-row gap-10"> */}
           <div className="">
             <div
@@ -30,10 +31,8 @@ const Home = () => {
           </div>
 
           <div className="flex flex-col justify-center gap-6 ">
-            <h1 className="text-white text-[30px]  lg:text-[55px] font-bold uppercase">
-              Sarkar Nayan
-            </h1>
-            <p className="text-[20px]  leading-[30px]">
+            <h1 className="font-h1 font-bold uppercase">Sarkar Nayan</h1>
+            <p className="font-body  leading-[30px]">
               Highly motivated and detail-oriented Web Developer with a
               Bachelor's degree in Computer Science and Engineering for 4 years.
               Proficient in PHP, with a deep understanding of the Laravel
