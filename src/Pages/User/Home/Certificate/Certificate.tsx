@@ -89,7 +89,7 @@ const Certificate = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-64 object-cover rounded"
+                className="w-full h-64 object-contain rounded"
               />
               <p className="mt-2 text-white font-medium">{item.title}</p>
             </div>
