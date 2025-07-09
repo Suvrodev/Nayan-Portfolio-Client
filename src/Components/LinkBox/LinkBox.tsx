@@ -9,7 +9,7 @@ interface IProps {
 const LinkBox = ({ text1, text2, text3 }: IProps) => {
   return (
     <div className="">
-      <span className="bg-[#222222] p-3 text-white ">
+      <span className=" primaryBox  p-3 rounded-[2px] ">
         {text1}
         <span className={`${text2 ? "" : "hidden"}`}>
           {" "}
