@@ -25,3 +25,14 @@ export type TEducation = {
   institute: string;
   topic: string;
 };
+
+export type TAdmin = {
+  _id: string;
+  firstName: string;
+  lastName: string;
+  email: string;
+  role: string;
+  isBlocked: string;
+  phone: string;
+  image: string;
+};
