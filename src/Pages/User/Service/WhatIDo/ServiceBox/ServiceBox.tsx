@@ -1,6 +1,5 @@
 import "./ServiceBox.css";
 import { Link } from "react-router";
-import ServiceModal from "./ServiceModal/ServiceModal";
 import type { TServcie } from "@/utils/types/globalTypes";
 
 interface IProps {
@@ -12,7 +11,7 @@ interface IProps {
 const ServiceBox = ({ service, isAdmin, idx }: IProps) => {
   isAdmin = false;
   const number = idx + 1;
-  const { _id, title, desc, popupDesc, image } = service;
+  const { _id, title, shortDescription } = service;
 
   //   const handleDelete = (_id) => {
   //     console.log("Delete id: ", _id);
@@ -35,7 +34,7 @@ const ServiceBox = ({ service, isAdmin, idx }: IProps) => {
             <span></span>
           </div>
           <h1 className="text-2xl font-bold mt-4">{title}</h1>
-          <p className="c">{desc}</p>
+          <p className="c">{shortDescription}</p>
         </div>
         <div className="py-4 absolute bottom-[20px]">
           {/* <ServiceModal image={image} popupDesc={popupDesc} /> */}

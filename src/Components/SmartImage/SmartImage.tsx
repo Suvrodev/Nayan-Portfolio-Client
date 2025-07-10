@@ -3,16 +3,14 @@ import React, { useEffect, useState } from "react";
 interface SmartImageProps {
   src: string;
   alt?: string;
-  width?: number | string;
-  height?: number | string;
+
   className?: string;
 }
 
 const SmartImage: React.FC<SmartImageProps> = ({
   src,
   alt = "image",
-  width = "auto",
-  height = "auto",
+
   className = "",
 }) => {
   const [imageSrc, setImageSrc] = useState<string>("");
@@ -41,14 +39,7 @@ const SmartImage: React.FC<SmartImageProps> = ({
     }
   }, [src]);
 
-  return (
-    <img
-      src={imageSrc}
-      alt={alt}
-      style={{ width, height }}
-      className={className}
-    />
-  );
+  return <img src={imageSrc} alt={alt} className={className} />;
 };
 
 export default SmartImage;

@@ -2,8 +2,9 @@ export type TServcie = {
   _id: number;
   title: string;
   image: string;
-  popupDesc: string;
-  desc: string;
+  shortDescription: string;
+  description: string;
+  order: number;
 };
 
 export type TTestimonial = {
