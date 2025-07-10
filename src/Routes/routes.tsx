@@ -7,6 +7,9 @@ import About from "@/Pages/User/About/About";
 import ServiceDetail from "@/Pages/User/Service/WhatIDo/ServiceDetail/ServiceDetail";
 import Login from "@/Pages/AdminInterAction/Login/Login";
 import Registration from "@/Pages/AdminInterAction/Registration/Registration";
+import AdminDashboard from "@/Layout/AdminDashboard/AdminDashboard";
+import AdminHome from "@/Pages/Admin/AdminHome/AdminHome";
+import AdminProtectedRoute from "./ProtectedRoutes/AdminProtectedRoute";
 
 export const router = createBrowserRouter([
   {
@@ -44,6 +47,29 @@ export const router = createBrowserRouter([
       {
         path: "/registration",
         element: <Registration />,
+      },
+    ],
+  },
+  {
+    path: "admin-dashboard",
+    element: (
+      <AdminProtectedRoute>
+        <AdminDashboard />
+      </AdminProtectedRoute>
+    ),
+    children: [
+      {
+        index: true,
+        element: (
+          <AdminProtectedRoute>
+            {" "}
+            <AdminHome />
+          </AdminProtectedRoute>
+        ),
+      },
+      {
+        path: "home",
+        element: <AdminHome />,
       },
     ],
   },

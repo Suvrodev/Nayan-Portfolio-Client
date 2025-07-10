@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { MdVisibility, MdVisibilityOff } from "react-icons/md";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { toast } from "sonner";
 
 type LoginFormInputs = {
@@ -17,6 +17,7 @@ type LoginFormInputs = {
 const Login = () => {
   const dispatch = useDispatch();
   const [login] = useLoginMutation();
+  const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
   const {
@@ -35,6 +36,7 @@ const Login = () => {
       //   console.log("Admin: ", admin);
       dispatch(setAdmin({ user: admin, token: res?.data?.token }));
       toast.success("Login Successfully", { id: sonarId });
+      navigate(`/${admin?.role}-dashboard`);
     }
   };
 
@@ -49,7 +51,6 @@ const Login = () => {
             <label className="block text-sm mb-1">Email</label>
             <input
               type="email"
-              defaultValue={"suvrodeb@example.com"}
               {...register("email", {
                 required: "Email is required",
               })}
@@ -71,7 +72,6 @@ const Login = () => {
             <div className="relative">
               <input
                 type={showPassword ? "text" : "password"}
-                defaultValue={"SecurePass123!"}
                 {...register("password", {
                   required: "Password is required",
                 })}
