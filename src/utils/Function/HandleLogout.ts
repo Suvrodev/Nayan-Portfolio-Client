@@ -1,9 +1,9 @@
+import { logOut } from "@/redux/features/auth/authSlics";
 import { useDispatch } from "react-redux";
-import { logout } from "../../redux/api/features/auth/authSlice";
 
 export const HandleLogout = () => {
   const dispatch = useDispatch();
-  dispatch(logout());
+  dispatch(logOut());
 
   return;
 };

@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import portfolioCategoryReducer from "./features/portfolio/portfolioSlice";
 import authReducer from "./features/auth/authSlics";
+import serviceReducer from "./features/service/serviceSlice";
 import { baseApi } from "./api/baseApi";
 import {
   persistStore,
@@ -27,6 +28,7 @@ export const store = configureStore({
     // auth: authReducer,
     auth: persistedReducer,
     portfolioCategories: portfolioCategoryReducer,
+    services: serviceReducer,
   },
   middleware: (getDefaultMiddlewares) =>
     getDefaultMiddlewares({

@@ -1,18 +1,14 @@
-import { useEffect, useState } from "react";
 import HomeServiceDesign from "./HomeServiceDesign/HomeServiceDesign";
+import type { TServcie } from "@/utils/types/globalTypes";
+
+import { useAppSelector } from "@/redux/hooks";
 
 const HomeService = () => {
-  const [services, setServices] = useState([]);
-  useEffect(() => {
-    fetch("/service.json")
-      .then((res) => res.json())
-      .then((data) => setServices(data));
-  }, []);
-
+  const { serviceStore } = useAppSelector((state) => state.services);
   return (
     <div>
       <div className="flex flex-col  justify-center gap-y-4 md:gap-y-0 ">
-        {services.map((service, idx) => (
+        {serviceStore?.map((service: TServcie, idx: number) => (
           <HomeServiceDesign key={idx} idx={idx} service={service} />
         ))}
       </div>

@@ -8,7 +8,7 @@ interface IProps {
 
 const HomeServiceDesign = ({ service, idx }: IProps) => {
   const cId = idx + 1;
-  const { title, desc } = service;
+  const { title, shortDescription } = service;
 
   return (
     <div className="relative">
@@ -16,7 +16,9 @@ const HomeServiceDesign = ({ service, idx }: IProps) => {
         {/* <div className="grid grid-cols-[48%_auto_48%] gap-10 items-center "> */}
         <div className={`perSide   relative  p-4 rounded-[10px] `}>
           <h1 className="perTitle  ">{title}</h1>
-          <p className="text-justify leading-[30px] ">{desc}</p>{" "}
+          <p className="text-justify leading-[30px] ">
+            {shortDescription}
+          </p>{" "}
           <span>Read More..</span>
           <div className="z-10">
             <p

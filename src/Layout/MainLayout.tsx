@@ -1,3 +1,4 @@
+import StoreService from "@/components/StoreService/StoreService";
 import "./MainLayout.css";
 import Cursor from "@/components/Cursor/Cursor";
 import WeAccept from "@/Pages/User/Home/WeAccept/WeAccept";
@@ -24,6 +25,9 @@ const MainLayout = () => {
         <div className="bg-[#222222] p-20">
           <WeAccept />
         </div>
+
+        {/* For Store Data */}
+        <StoreService />
       </div>
     </div>
   );
