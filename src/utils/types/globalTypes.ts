@@ -1,9 +1,15 @@
+export type TSkillAndTool = {
+  title: string;
+  percent: number;
+};
+
 export type TServcie = {
   _id: number;
   title: string;
   image: string;
   shortDescription: string;
   description: string;
+  skillAndTools: TSkillAndTool[];
   order: number;
 };
 

@@ -1,5 +1,7 @@
 import SmartImage from "@/components/SmartImage/SmartImage";
+import TechIcon from "@/components/TechIcon/TechIcon";
 import { useGetSingleServiceQuery } from "@/redux/features/service/serviceApi";
+import type { TSkillAndTool } from "@/utils/types/globalTypes";
 import { useParams } from "react-router";
 
 const ServiceDetail = () => {
@@ -24,6 +26,44 @@ const ServiceDetail = () => {
         <p className="text-gray-300 leading-relaxed text-lg whitespace-pre-line">
           {service?.description}
         </p>
+
+        {/* Skills Section */}
+        {service?.skillAndTools?.length > 0 && (
+          <div className="mt-10">
+            <h2 className="text-2xl font-semibold mb-6">My Skills & Tools</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-6">
+              {service.skillAndTools.map((tool: TSkillAndTool, idx: number) => (
+                <div
+                  key={idx}
+                  className="primaryBox rounded-[10px] p-6 text-center shadow-md border border-gray-700"
+                >
+                  <div className="flex justify-center mb-3">
+                    <TechIcon
+                      name={tool.title}
+                      size={32}
+                      className="text-purple-400"
+                    />
+                  </div>
+                  <h3 className="text-lg font-bold mb-2 text-white">
+                    {tool.title}
+                  </h3>
+
+                  <div className="w-full bg-gray-700 rounded-full h-2.5 mb-3">
+                    <div
+                      className="bg-purple-500 h-2.5 rounded-full transition-all duration-700 ease-in-out"
+                      style={{ width: `${tool.percent}%` }}
+                    ></div>
+                  </div>
+
+                  <p className="text-sm text-gray-400">{tool.percent}%</p>
+                  <p className="text-sm font-semibold mt-1 text-gray-300">
+                    Skill Level
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
