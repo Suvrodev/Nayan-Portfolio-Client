@@ -39,7 +39,9 @@ const SmartImage: React.FC<SmartImageProps> = ({
     }
   }, [src]);
 
-  return <img src={imageSrc} alt={alt} className={className} />;
+  return imageSrc ? (
+    <img src={imageSrc} alt={alt} className={className} />
+  ) : null;
 };
 
 export default SmartImage;
