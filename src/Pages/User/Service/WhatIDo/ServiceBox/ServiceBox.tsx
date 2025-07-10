@@ -25,8 +25,8 @@ const ServiceBox = ({ service, isAdmin, idx }: IProps) => {
 
   return (
     <div>
-      <div className="primaryBox rounded-[4px] py-10 px-10 text-white h-[450px] relative">
-        <div className="flex flex-col gap-4 justify-center">
+      <div className="primaryBox rounded-[4px] py-10 px-10 text-white h-[450px] relative ">
+        <div className="flex flex-col gap-4 justify-center ">
           <div className="flex justify-between">
             <span className="bg-[#333333] w-[70px] h-[70px] rounded-full flex items-center justify-center font-bold text-xl ">
               {number}

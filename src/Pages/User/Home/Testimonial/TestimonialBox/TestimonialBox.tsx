@@ -10,8 +10,8 @@ const TestimonialBox = ({ testimonial }: IProps) => {
   const { image, desc, rating, name, position } = testimonial;
 
   return (
-    <div className="primaryBox rounded-[7px] relative">
-      <div className="text-center text-white px-10 py-28">
+    <div className="primaryBox rounded-[7px] relative ">
+      <div className="text-center text-white px-10 py-28 ">
         <h1>{desc}</h1>
         <h1 className=" font-bold text-2xl text-white mt-10">{name}</h1>
         <h1 className="text-[#cccccc]">{position}</h1>

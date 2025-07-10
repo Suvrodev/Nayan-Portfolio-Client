@@ -6,6 +6,7 @@ import HomeService from "./HomeService/HomeService";
 import Testimonial from "./Testimonial/Testimonial";
 import { useTitle } from "@/utils/hook/useTitle";
 import Certificate from "./Certificate/Certificate";
+import HomeContact from "./HomeContact/HomeContact";
 
 const Home = () => {
   const divStyle = {
@@ -59,6 +60,9 @@ const Home = () => {
         </div>
         <div className="p-4 md:px-10 md:py-20  ">
           <Certificate />
+        </div>
+        <div className="p-4 md:px-[220px] md:py-20 bg-[#141414] ">
+          <HomeContact />
         </div>
       </div>
     </div>

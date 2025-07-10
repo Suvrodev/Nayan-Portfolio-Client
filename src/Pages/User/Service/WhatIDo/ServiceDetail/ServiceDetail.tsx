@@ -13,7 +13,7 @@ const ServiceDetail = () => {
   }
 
   return (
-    <div className="min-h-screen flex justify-center items-center">
+    <div className="min-h-screen flex justify-center items-center my-4">
       <div className="max-w-4xl mx-auto primaryBox p-6 rounded-2xl shadow-xl">
         <SmartImage
           src={service?.image}

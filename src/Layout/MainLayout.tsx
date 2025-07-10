@@ -16,7 +16,7 @@ const MainLayout = () => {
         <div className="hidden md:block">
           <Cursor />
         </div>
-        <div className="md:hidden">
+        <div className="md:hidden sticky top-0">
           <MobileHeader />
         </div>
         <Outlet />
