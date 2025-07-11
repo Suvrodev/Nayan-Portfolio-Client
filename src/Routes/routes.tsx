@@ -10,6 +10,7 @@ import Registration from "@/Pages/AdminInterAction/Registration/Registration";
 import AdminDashboard from "@/Layout/AdminDashboard/AdminDashboard";
 import AdminHome from "@/Pages/Admin/AdminHome/AdminHome";
 import AdminProtectedRoute from "./ProtectedRoutes/AdminProtectedRoute";
+import TextEditor from "@/components/TextEditor/TextEditor";
 
 export const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ export const router = createBrowserRouter([
       {
         path: "/registration",
         element: <Registration />,
+      },
+      {
+        path: "/te",
+        element: <TextEditor />,
       },
     ],
   },
