@@ -40,7 +40,7 @@ export const router = createBrowserRouter([
         element: <Portfolio isAdmin={true} />,
       },
       {
-        path: "/portfolio/:title",
+        path: "/portfolio-detail/:title",
         element: <PortfolioDetail />,
       },
       {
