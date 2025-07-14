@@ -14,7 +14,7 @@ export const serviceSlice = createSlice({
   initialState,
   reducers: {
     setService: (state, action) => {
-      console.log("Service Payload: ", action.payload);
+      // console.log("Service Payload: ", action.payload);
       state.serviceStore = action.payload;
     },
   },

@@ -11,6 +11,8 @@ import AdminDashboard from "@/Layout/AdminDashboard/AdminDashboard";
 import AdminHome from "@/Pages/Admin/AdminHome/AdminHome";
 import AdminProtectedRoute from "./ProtectedRoutes/AdminProtectedRoute";
 import TextEditor from "@/components/TextEditor/TextEditor";
+import Portfolio from "@/Pages/Admin/Portfolio/Portfolio";
+import PortfolioDetail from "@/Pages/Admin/Portfolio/PortfolioDetail/PortfolioDetail";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +34,14 @@ export const router = createBrowserRouter([
       {
         path: "/service-detail/:_id",
         element: <ServiceDetail />,
+      },
+      {
+        path: "/portfolio",
+        element: <Portfolio isAdmin={true} />,
+      },
+      {
+        path: "/portfolio/:title",
+        element: <PortfolioDetail />,
       },
       {
         path: "/about",
