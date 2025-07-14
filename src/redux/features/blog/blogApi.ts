@@ -9,7 +9,7 @@ const blogApi = baseApi.injectEndpoints({
         };
       },
     }),
-    getSinglePortfolio: builder.query({
+    getSingleBlog: builder.query({
       query: (title) => {
         return {
           url: `/blog/${title}`,
@@ -19,4 +19,4 @@ const blogApi = baseApi.injectEndpoints({
   }),
 });
 
-export const { useGetAllBlogsQuery, useGetSinglePortfolioQuery } = blogApi;
+export const { useGetAllBlogsQuery, useGetSingleBlogQuery } = blogApi;

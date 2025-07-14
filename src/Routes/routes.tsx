@@ -14,6 +14,7 @@ import TextEditor from "@/components/TextEditor/TextEditor";
 import Portfolio from "@/Pages/User/Portfolio/Portfolio";
 import PortfolioDetail from "@/Pages/User/Portfolio/PortfolioDetail/PortfolioDetail";
 import Blog from "@/Pages/User/Blog/Blog";
+import BlogDetail from "@/Pages/User/Blog/BlogDetail/BlogDetail";
 
 export const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ export const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog isAdmin={true} />,
+      },
+      {
+        path: "/blog-detail/:title",
+        element: <BlogDetail />,
       },
       {
         path: "/about",

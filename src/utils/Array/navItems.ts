@@ -4,7 +4,7 @@ export const navItems = [
   { path: "/portfolio", label: "Portfolio" },
   { path: "/about", label: "About" },
   { path: "/gigs", label: "Gigs" },
-  { path: "/project", label: "Project" },
+  // { path: "/project", label: "Project" },
   { path: "/blog", label: "Blog" },
   { path: "/contact", label: "Contact" },
 ];
