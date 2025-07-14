@@ -13,6 +13,24 @@ export type TServcie = {
   order: number;
 };
 
+export type TPortfolio = {
+  title: string;
+  image: string;
+  price: number;
+  description: string;
+  category: string;
+  link: string;
+};
+
+export type TBlog = {
+  title: string;
+  image: string;
+  description: string;
+  category: string;
+  author: string;
+  date: string;
+};
+
 export type TTestimonial = {
   id: string;
   image: string;

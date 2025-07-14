@@ -5,6 +5,6 @@ export const navItems = [
   { path: "/about", label: "About" },
   { path: "/gigs", label: "Gigs" },
   { path: "/project", label: "Project" },
-  { path: "/blogs", label: "Blog" },
+  { path: "/blog", label: "Blog" },
   { path: "/contact", label: "Contact" },
 ];

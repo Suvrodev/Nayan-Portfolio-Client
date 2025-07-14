@@ -11,8 +11,9 @@ import AdminDashboard from "@/Layout/AdminDashboard/AdminDashboard";
 import AdminHome from "@/Pages/Admin/AdminHome/AdminHome";
 import AdminProtectedRoute from "./ProtectedRoutes/AdminProtectedRoute";
 import TextEditor from "@/components/TextEditor/TextEditor";
-import Portfolio from "@/Pages/Admin/Portfolio/Portfolio";
-import PortfolioDetail from "@/Pages/Admin/Portfolio/PortfolioDetail/PortfolioDetail";
+import Portfolio from "@/Pages/User/Portfolio/Portfolio";
+import PortfolioDetail from "@/Pages/User/Portfolio/PortfolioDetail/PortfolioDetail";
+import Blog from "@/Pages/User/Blog/Blog";
 
 export const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
       {
         path: "/portfolio-detail/:title",
         element: <PortfolioDetail />,
+      },
+      {
+        path: "/blog",
+        element: <Blog isAdmin={true} />,
       },
       {
         path: "/about",
