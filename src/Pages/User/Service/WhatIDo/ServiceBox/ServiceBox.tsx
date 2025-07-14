@@ -1,6 +1,11 @@
 import "./ServiceBox.css";
 import { Link } from "react-router";
 import type { TServcie } from "@/utils/types/globalTypes";
+import UpdateButton from "@/components/AdminActionButtons/UpdateButton/UpdateButton";
+import DeleteButton from "@/components/AdminActionButtons/DeleteButton/DeleteButton";
+import { useDeleteServiceMutation } from "@/redux/features/service/serviceApi";
+import { toast } from "sonner";
+import { sonarId } from "@/utils/Function/sonarId";
 
 interface IProps {
   service: TServcie;
@@ -9,19 +14,20 @@ interface IProps {
 }
 
 const ServiceBox = ({ service, isAdmin, idx }: IProps) => {
-  isAdmin = false;
   const number = idx + 1;
   const { _id, title, shortDescription } = service;
 
-  //   const handleDelete = (_id) => {
-  //     console.log("Delete id: ", _id);
-  //     axios.delete(`${baseUrl}/service/${_id}`).then((res) => {
-  //       if (res.data.deletedCount > 0) {
-  //         successfullToast("Deleted Successfully");
-  //         setGetDep(!getDep);
-  //       }
-  //     });
-  //   };
+  const [deleteService] = useDeleteServiceMutation();
+
+  const handleDelete = async (id: string) => {
+    console.log("Delete Clicked ID:", id);
+    toast.loading("Deleting", { id: sonarId });
+    const res = await deleteService(id).unwrap();
+    console.log("Res: ", res);
+    if (res?.success) {
+      toast.success(res?.message, { id: sonarId });
+    }
+  };
 
   return (
     <div>
@@ -52,25 +58,12 @@ const ServiceBox = ({ service, isAdmin, idx }: IProps) => {
         </div>
 
         {/* Update and Delete */}
-        <div
-          className={`${
-            isAdmin ? "" : "hidden"
-          } absolute  flex gap-2 bottom-0 right-0`}
-        >
-          <div className="bg-red-500 p-2 rounded-md flex justify-center text-white">
-            {/* <button onClick={() => handleDelete(_id)}>
-              <DeleteIcon />
-            </button> */}
+        {isAdmin && (
+          <div className="absolute top-2 right-2 z-10 flex items-center gap-x-2">
+            <UpdateButton />
+            <DeleteButton onClick={() => handleDelete(_id)} />
           </div>
-          <div className="bg-green-500 p-2 rounded-md flex justify-center text-white">
-            <Link to={`updateservice/${_id}`}>
-              {" "}
-              {/* <button>
-                <BrowserUpdatedIcon />
-              </button> */}
-            </Link>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

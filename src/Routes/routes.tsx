@@ -31,7 +31,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/service",
-        element: <Service />,
+        element: <Service isAdmin={false} />,
       },
       {
         path: "/service-detail/:_id",
@@ -95,6 +95,14 @@ export const router = createBrowserRouter([
       {
         path: "home",
         element: <AdminHome />,
+      },
+      {
+        path: "service",
+        element: (
+          <AdminProtectedRoute>
+            <Service isAdmin={true} />
+          </AdminProtectedRoute>
+        ),
       },
     ],
   },

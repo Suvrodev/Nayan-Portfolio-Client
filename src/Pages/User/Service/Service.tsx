@@ -4,7 +4,11 @@ import Consult from "./Consult/Consult";
 import WhatIDo from "./WhatIDo/WhatIDo";
 import PricingList from "./PricingList/PricingList";
 
-const Service = () => {
+interface IProps {
+  isAdmin: boolean;
+}
+
+const Service = ({ isAdmin }: IProps) => {
   useTitle("Service");
   return (
     <div className="overflow-hidden">
@@ -12,7 +16,7 @@ const Service = () => {
         <LinkBox text1={"Service"} />
       </div>
       <div className="pageMargin">
-        <WhatIDo isAdmin={true} />
+        <WhatIDo isAdmin={isAdmin} />
       </div>
       {/* <div className="p-5 md:p-28 bg-[#222222]">
         <TrustedClients />
