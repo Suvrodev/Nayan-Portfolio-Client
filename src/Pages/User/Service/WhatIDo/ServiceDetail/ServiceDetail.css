@@ -1,0 +1,20 @@
+/* .prose :where(p, h1, h2, h3, li, strong, em) {
+  color: white !important;
+} */
+
+/* .prose :where(*) {
+  color: white !important;
+} */
+
+/* .prose :where(*):not(ul) {
+  color: white !important;
+} */
+
+.prose :where(*):not(ul):not(ol) {
+  color: white !important;
+}
+
+.prose ul,
+.prose ol {
+  background-color: #292929 !important;
+}

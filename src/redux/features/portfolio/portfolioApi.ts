@@ -5,14 +5,14 @@ const portfolioApi = baseApi.injectEndpoints({
     getAllPortfolio: builder.query({
       query: () => {
         return {
-          url: "/portfolio",
+          url: "/portfolioo",
         };
       },
     }),
     getSinglePortfolio: builder.query({
       query: (title) => {
         return {
-          url: `/portfolio/${title}`,
+          url: `/portfolioo/${title}`,
         };
       },
     }),

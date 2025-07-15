@@ -7,7 +7,7 @@ import {
   FaPython,
 } from "react-icons/fa";
 import { SiNextdotjs, SiExpress } from "react-icons/si";
-import type { IconType } from "react-icons"; // ✅ Correct import
+import type { IconType } from "react-icons";
 
 interface TechIconProps {
   name: string;
@@ -15,14 +15,18 @@ interface TechIconProps {
   size?: number;
 }
 
+// Normalize function: lowercase + remove ".js" + trim
+const normalize = (name: string) =>
+  name.toLowerCase().replace(/\.js$/, "").trim();
+
 const iconMap: Record<string, IconType> = {
-  React: FaReact,
-  Next: SiNextdotjs,
-  Express: SiExpress,
-  Node: FaNodeJs,
-  HTML: FaHtml5,
-  CSS: FaCss3Alt,
-  Python: FaPython,
+  react: FaReact,
+  next: SiNextdotjs,
+  express: SiExpress,
+  node: FaNodeJs,
+  html: FaHtml5,
+  css: FaCss3Alt,
+  python: FaPython,
 };
 
 const TechIcon: React.FC<TechIconProps> = ({
@@ -30,7 +34,8 @@ const TechIcon: React.FC<TechIconProps> = ({
   className = "",
   size = 24,
 }) => {
-  const IconComponent = iconMap[name] || null;
+  const normalized = normalize(name);
+  const IconComponent = iconMap[normalized] || null;
 
   return IconComponent ? (
     <IconComponent className={className} size={size} />

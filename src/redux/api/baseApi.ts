@@ -22,6 +22,7 @@ import { sonarId } from "@/utils/Function/sonarId";
 const baseQuery = fetchBaseQuery({
   baseUrl: "http://localhost:7000/api",
   // baseUrl: "https://nayan-portfolio-server.vercel.app/api",
+  // baseUrl: "https://nayan-portfolio-server-henna.vercel.app/api",
   credentials: "include",
   prepareHeaders: (headers, { getState }) => {
     const token = (getState() as RootState).auth.token;
@@ -51,7 +52,8 @@ const baseQueryWithRefreshToken: BaseQueryFn<
   }
   if (result?.error?.status === 400) {
     // toast.error(result?.error?.data?.message, { id: sonarId });
-    toast.error(result?.error?.data?.error[0]?.message, { id: sonarId });
+    console.log("Result: ", result);
+    toast.error(result?.error?.data?.message, { id: sonarId });
   }
 
   if (result.error?.status === 401) {

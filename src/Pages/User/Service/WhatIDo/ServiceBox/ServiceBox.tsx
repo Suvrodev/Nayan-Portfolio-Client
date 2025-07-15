@@ -1,6 +1,6 @@
 import "./ServiceBox.css";
 import { Link } from "react-router";
-import type { TServcie } from "@/utils/types/globalTypes";
+import type { TService } from "@/utils/types/globalTypes";
 import UpdateButton from "@/components/AdminActionButtons/UpdateButton/UpdateButton";
 import DeleteButton from "@/components/AdminActionButtons/DeleteButton/DeleteButton";
 import { useDeleteServiceMutation } from "@/redux/features/service/serviceApi";
@@ -8,7 +8,7 @@ import { toast } from "sonner";
 import { sonarId } from "@/utils/Function/sonarId";
 
 interface IProps {
-  service: TServcie;
+  service: TService;
   isAdmin: boolean;
   idx: number;
 }
@@ -19,7 +19,7 @@ const ServiceBox = ({ service, isAdmin, idx }: IProps) => {
 
   const [deleteService] = useDeleteServiceMutation();
 
-  const handleDelete = async (id: string) => {
+  const handleDelete = async (id: number) => {
     console.log("Delete Clicked ID:", id);
     toast.loading("Deleting", { id: sonarId });
     const res = await deleteService(id).unwrap();
@@ -60,7 +60,9 @@ const ServiceBox = ({ service, isAdmin, idx }: IProps) => {
         {/* Update and Delete */}
         {isAdmin && (
           <div className="absolute top-2 right-2 z-10 flex items-center gap-x-2">
-            <UpdateButton />
+            <Link to={`Update-Service/${_id}`}>
+              <UpdateButton />
+            </Link>
             <DeleteButton onClick={() => handleDelete(_id)} />
           </div>
         )}

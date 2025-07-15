@@ -2,6 +2,16 @@ import { baseApi } from "@/redux/api/baseApi";
 
 const serviceApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
+    addService: builder.mutation({
+      query: (data) => {
+        return {
+          url: "/service",
+          method: "POST",
+          body: data,
+        };
+      },
+      invalidatesTags: ["service"],
+    }),
     getAllService: builder.query({
       query: () => {
         return {
@@ -30,6 +40,7 @@ const serviceApi = baseApi.injectEndpoints({
 });
 
 export const {
+  useAddServiceMutation,
   useGetAllServiceQuery,
   useGetSingleServiceQuery,
   useDeleteServiceMutation,

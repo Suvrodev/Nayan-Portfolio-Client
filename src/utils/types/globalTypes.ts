@@ -3,7 +3,7 @@ export type TSkillAndTool = {
   percent: number;
 };
 
-export type TServcie = {
+export type TService = {
   _id: number;
   title: string;
   image: string;
