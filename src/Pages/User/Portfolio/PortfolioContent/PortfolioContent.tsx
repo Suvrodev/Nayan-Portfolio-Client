@@ -33,12 +33,7 @@ const PortfolioContent = ({ isAdmin }: IProps) => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {filteredPortfolios?.map((item: TPortfolio, idx: number) => (
-          <PortfolioBox
-            key={idx}
-            title={item.title}
-            image={item.image}
-            isAdmin={isAdmin}
-          />
+          <PortfolioBox key={idx} portfolio={item} isAdmin={isAdmin} />
         ))}
       </div>
     </div>

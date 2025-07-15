@@ -27,8 +27,13 @@ const ServiceDetail = () => {
         {/* <p className="text-gray-300 leading-relaxed text-lg whitespace-pre-line">
           {service?.description}
         </p> */}
+        {/* <div
+          className="prose prose-invert max-w-none  py-2 rounded-md"
+          dangerouslySetInnerHTML={{ __html: service?.description }}
+        ></div> */}
+
         <div
-          className="prose prose-invert max-w-none px-4 py-2 rounded-md"
+          className="prose max-w-none py-2 rounded-md text-black dark:prose-invert dark:text-white"
           dangerouslySetInnerHTML={{ __html: service?.description }}
         ></div>
 

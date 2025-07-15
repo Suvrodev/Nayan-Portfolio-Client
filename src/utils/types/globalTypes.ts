@@ -4,7 +4,7 @@ export type TSkillAndTool = {
 };
 
 export type TService = {
-  _id: number;
+  _id: string;
   title: string;
   image: string;
   shortDescription: string;
@@ -14,6 +14,7 @@ export type TService = {
 };
 
 export type TPortfolio = {
+  _id: string;
   title: string;
   image: string;
   price: number;

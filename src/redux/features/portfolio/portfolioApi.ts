@@ -8,6 +8,7 @@ const portfolioApi = baseApi.injectEndpoints({
           url: "/portfolioo",
         };
       },
+      providesTags: ["portfolio"],
     }),
     getSinglePortfolio: builder.query({
       query: (title) => {
@@ -15,9 +16,22 @@ const portfolioApi = baseApi.injectEndpoints({
           url: `/portfolioo/${title}`,
         };
       },
+      providesTags: ["portfolio"],
+    }),
+    deletePortfolio: builder.mutation({
+      query: (_id) => {
+        return {
+          url: `/portfolioo/${_id}`,
+          method: "DELETE",
+        };
+      },
+      invalidatesTags: ["portfolio"],
     }),
   }),
 });
 
-export const { useGetAllPortfolioQuery, useGetSinglePortfolioQuery } =
-  portfolioApi;
+export const {
+  useGetAllPortfolioQuery,
+  useGetSinglePortfolioQuery,
+  useDeletePortfolioMutation,
+} = portfolioApi;

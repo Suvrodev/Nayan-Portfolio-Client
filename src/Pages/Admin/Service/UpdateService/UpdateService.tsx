@@ -3,11 +3,17 @@ import type { TService } from "@/utils/types/globalTypes";
 import JoditEditorComponent from "@/components/JoditEditorComponent/JoditEditorComponent";
 import { useEffect, useState } from "react";
 import { convertToBase64 } from "@/components/convertToBase64/convertToBase64";
-import { useGetSingleServiceQuery } from "@/redux/features/service/serviceApi";
+import {
+  useGetSingleServiceQuery,
+  useUpdateServiceMutation,
+} from "@/redux/features/service/serviceApi";
 import { useParams } from "react-router";
+import { toast } from "sonner";
+import { sonarId } from "@/utils/Function/sonarId";
 
 const UpdateService = () => {
   const { id } = useParams();
+  const [updateService] = useUpdateServiceMutation();
   const { data, isLoading } = useGetSingleServiceQuery(id);
   //   const [updateService] = useUpdateServiceMutation();
   const service = data?.data;
@@ -48,11 +54,15 @@ const UpdateService = () => {
 
   const onSubmit = async (data: TService) => {
     console.log("Data: ", data);
-    // toast.loading("Updating Service...", { id: sonarId });
-    // const res = await updateService({ id, updatedData: data }).unwrap();
-    // if (res?.success) {
-    //   toast.success("Service Updated Successfully!", { id: sonarId });
-    // }
+    toast.loading("Updating Service...", { id: sonarId });
+    const res = await updateService({
+      _id: data?._id,
+      updatedData: data,
+    }).unwrap();
+    console.log("Res: ", res);
+    if (res?.status) {
+      toast.success("Service Updated Successfully!", { id: sonarId });
+    }
   };
 
   if (isLoading) return <p className="text-center text-white">Loading...</p>;

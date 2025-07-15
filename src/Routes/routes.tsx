@@ -41,7 +41,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/portfolio",
-        element: <Portfolio isAdmin={true} />,
+        element: <Portfolio isAdmin={false} />,
       },
       {
         path: "/portfolio-detail/:title",
@@ -119,6 +119,14 @@ export const router = createBrowserRouter([
         element: (
           <AdminProtectedRoute>
             <UpdateService />
+          </AdminProtectedRoute>
+        ),
+      },
+      {
+        path: "portfolio",
+        element: (
+          <AdminProtectedRoute>
+            <Portfolio isAdmin={true} />
           </AdminProtectedRoute>
         ),
       },

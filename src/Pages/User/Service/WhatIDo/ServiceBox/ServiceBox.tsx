@@ -19,7 +19,7 @@ const ServiceBox = ({ service, isAdmin, idx }: IProps) => {
 
   const [deleteService] = useDeleteServiceMutation();
 
-  const handleDelete = async (id: number) => {
+  const handleDelete = async (id: string) => {
     console.log("Delete Clicked ID:", id);
     toast.loading("Deleting", { id: sonarId });
     const res = await deleteService(id).unwrap();
