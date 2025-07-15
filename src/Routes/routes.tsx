@@ -17,6 +17,8 @@ import Blog from "@/Pages/User/Blog/Blog";
 import BlogDetail from "@/Pages/User/Blog/BlogDetail/BlogDetail";
 import AddService from "@/Pages/Admin/Service/AddService/AddService";
 import UpdateService from "@/Pages/Admin/Service/UpdateService/UpdateService";
+import AddPortfolio from "@/Pages/Admin/Portfolio/AddPortfolio/AddPortfolio";
+import UpdatePortfolio from "@/Pages/Admin/Portfolio/UpdatePortfolio/UpdatePortfolio";
 
 export const router = createBrowserRouter([
   {
@@ -127,6 +129,22 @@ export const router = createBrowserRouter([
         element: (
           <AdminProtectedRoute>
             <Portfolio isAdmin={true} />
+          </AdminProtectedRoute>
+        ),
+      },
+      {
+        path: "portfolio/add-portfolio",
+        element: (
+          <AdminProtectedRoute>
+            <AddPortfolio />
+          </AdminProtectedRoute>
+        ),
+      },
+      {
+        path: "portfolio/update-portfolio/:title",
+        element: (
+          <AdminProtectedRoute>
+            <UpdatePortfolio />
           </AdminProtectedRoute>
         ),
       },

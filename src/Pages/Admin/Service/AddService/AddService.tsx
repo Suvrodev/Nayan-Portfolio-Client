@@ -2,10 +2,10 @@ import { useForm, useFieldArray, Controller } from "react-hook-form";
 import type { TService } from "@/utils/types/globalTypes";
 import JoditEditorComponent from "@/components/JoditEditorComponent/JoditEditorComponent";
 import { useState } from "react";
-import { convertToBase64 } from "@/components/convertToBase64/convertToBase64";
 import { useAddServiceMutation } from "@/redux/features/service/serviceApi";
 import { toast } from "sonner";
 import { sonarId } from "@/utils/Function/sonarId";
+import { compressAndConvertToBase64 } from "@/components/convertToBase64/compressAndConvertToBase64";
 
 const AddService = () => {
   const [addService] = useAddServiceMutation();
@@ -33,7 +33,8 @@ const AddService = () => {
   ) => {
     const file = event.target.files?.[0];
     if (file) {
-      const base64 = await convertToBase64(file);
+      // const base64 = await convertToBase64(file);
+      const base64 = await compressAndConvertToBase64(file);
       setImagePreview(base64); // preview
       setValue("image", base64); // RHF form value
     }

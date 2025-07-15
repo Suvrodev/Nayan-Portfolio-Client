@@ -7,6 +7,7 @@ const PortfolioDetail = () => {
   const { title } = useParams();
   const { data, isLoading } = useGetSinglePortfolioQuery(title);
   const portfolio = data?.data;
+  console.log("portfolio: ", portfolio);
 
   if (isLoading) {
     return <p className="text-center text-white mt-10">Loading...</p>;
@@ -37,9 +38,13 @@ const PortfolioDetail = () => {
         </div>
 
         {/* Description */}
-        <p className="text-gray-300 leading-relaxed text-lg whitespace-pre-line">
+        {/* <p className="text-gray-300 leading-relaxed text-lg whitespace-pre-line">
           {portfolio.description}
-        </p>
+        </p> */}
+        <div
+          className="prose prose-invert max-w-none text-gray-300 leading-relaxed text-lg"
+          dangerouslySetInnerHTML={{ __html: portfolio.description }}
+        ></div>
 
         {/* Price and Link */}
         <div className="mt-8 flex flex-wrap justify-between items-center gap-4">

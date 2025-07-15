@@ -20,7 +20,7 @@ const Portfolio = ({ isAdmin }: IProps) => {
         <h1 className="text-4xl font-bold text-white">Creative Portfolio</h1>
 
         <div className={`${isAdmin ? "" : "hidden"} mt-10`}>
-          <Link to={`/dashboard/portfolio/addportfolio`}>
+          <Link to={`/admin-dashboard/portfolio/add-portfolio`}>
             <PrimaryButton text="Add Portfolio" />
           </Link>
         </div>

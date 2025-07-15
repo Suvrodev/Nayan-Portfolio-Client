@@ -30,7 +30,10 @@ const PortfolioBox = ({ portfolio, isAdmin }: IPortfolioBoxProps) => {
       {/* Admin Buttons */}
       {isAdmin && (
         <div className="absolute top-2 right-2 z-10 flex items-center gap-x-2">
-          <UpdateButton />
+          <Link to={`update-portfolio/${portfolio?.title}`}>
+            {" "}
+            <UpdateButton />
+          </Link>
           <DeleteButton onClick={() => handleDelete(portfolio?._id)} />
         </div>
       )}

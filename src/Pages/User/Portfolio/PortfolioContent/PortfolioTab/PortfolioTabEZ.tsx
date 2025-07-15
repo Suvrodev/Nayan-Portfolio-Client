@@ -1,15 +1,7 @@
 import { selectPortfolioCategory } from "@/redux/features/portfolio/portfolioSlice";
+import { portfolioCategories } from "@/utils/Array/portfolioCategories";
 import { useEffect, useRef, useState } from "react";
 import { useDispatch } from "react-redux";
-
-const portfolioContent = [
-  "All",
-  "Web Design & Development",
-  "Ui/UX",
-  "Business Card",
-  "Logo Design",
-  "Flyer",
-];
 
 const PortfolioTabEZ = () => {
   const dispatch = useDispatch();
@@ -19,7 +11,7 @@ const PortfolioTabEZ = () => {
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   useEffect(() => {
-    const index = portfolioContent.indexOf(activeTab);
+    const index = portfolioCategories.indexOf(activeTab);
     const currentTab = tabRefs.current[index];
     if (currentTab) {
       const { offsetLeft, offsetWidth } = currentTab;
@@ -29,7 +21,7 @@ const PortfolioTabEZ = () => {
   return (
     <div className="w-full flex justify-center">
       <div className="relative inline-flex items-center gap-1 bg-[#2c2f36] rounded-full px-2 py-2">
-        {portfolioContent.map((item, index) => (
+        {portfolioCategories.map((item, index) => (
           <button
             key={item}
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
