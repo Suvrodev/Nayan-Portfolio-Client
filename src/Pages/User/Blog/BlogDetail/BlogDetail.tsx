@@ -1,3 +1,4 @@
+import GlitchText from "@/components/NotFound/NotFound";
 import SmartImage from "@/components/SmartImage/SmartImage";
 import { useGetSingleBlogQuery } from "@/redux/features/blog/blogApi";
 import { formatDate } from "@/utils/Function/formatDate";
@@ -15,7 +16,11 @@ const BlogDetail = () => {
   }
 
   if (!blog) {
-    return <p className="text-center text-red-500 py-10">Blog not found.</p>;
+    return (
+      <GlitchText speed={1} className="custom-class">
+        Blog Not Found
+      </GlitchText>
+    );
   }
   return (
     <div className="max-w-4xl mx-auto px-4 py-10 text-white">
