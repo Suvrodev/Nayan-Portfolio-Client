@@ -38,7 +38,6 @@ const serviceApi = baseApi.injectEndpoints({
     }),
     updateService: builder.mutation({
       query: ({ _id, updatedData }) => {
-        console.log("Update Date: ", updatedData);
         return {
           url: `/service/${_id}`,
           method: "PATCH",

@@ -1,5 +1,5 @@
+import type { TService } from "@/utils/types/globalTypes";
 import HomeServiceDesign from "./HomeServiceDesign/HomeServiceDesign";
-import type { TServcie } from "@/utils/types/globalTypes";
 
 import { useAppSelector } from "@/redux/hooks";
 
@@ -8,7 +8,7 @@ const HomeService = () => {
   return (
     <div>
       <div className="flex flex-col  justify-center gap-y-4 md:gap-y-0 ">
-        {serviceStore?.map((service: TServcie, idx: number) => (
+        {serviceStore?.map((service: TService, idx: number) => (
           <HomeServiceDesign key={idx} idx={idx} service={service} />
         ))}
       </div>

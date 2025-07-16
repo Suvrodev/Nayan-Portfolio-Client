@@ -24,12 +24,13 @@ export type TPortfolio = {
 };
 
 export type TBlog = {
+  _id: string;
   title: string;
   image: string;
   description: string;
   category: string;
   author: string;
-  date: string;
+  date: Date;
 };
 
 export type TTestimonial = {

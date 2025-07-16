@@ -1,7 +1,9 @@
+import Home from "@/Pages/User/Home/Home";
+
 const AdminHome = () => {
   return (
     <div>
-      <h1>Admin Home</h1>
+      <Home />
     </div>
   );
 };

@@ -1,0 +1,30 @@
+/* Force black background and white text */
+.editorBg .jodit-wysiwyg {
+  background-color: blue !important;
+  color: #fff !important;
+}
+
+/* When user types or focuses inside */
+.editorBg .jodit-wysiwyg * {
+  background-color: transparent !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+
+/* Toolbar and border styling */
+.editorBg .jodit-container {
+  background-color: #000 !important;
+  color: #fff !important;
+  border: 1px solid #444;
+}
+
+.editorBg .jodit-toolbar-button,
+.editorBg .jodit-toolbar-editor-collection {
+  background-color: #1f1f1f !important;
+  color: white !important;
+}
+
+.editorBg .jodit-status-bar {
+  background-color: #1f1f1f !important;
+  color: white !important;
+}

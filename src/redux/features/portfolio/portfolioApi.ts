@@ -21,9 +21,9 @@ const portfolioApi = baseApi.injectEndpoints({
       providesTags: ["portfolio"],
     }),
     getSinglePortfolio: builder.query({
-      query: (title) => {
+      query: (id) => {
         return {
-          url: `/portfolioo/title/${title}`,
+          url: `/portfolioo/${id}`,
         };
       },
       providesTags: ["portfolio"],

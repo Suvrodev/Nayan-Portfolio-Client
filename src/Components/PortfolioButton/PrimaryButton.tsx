@@ -28,7 +28,8 @@ interface IProps {
 
 const PrimaryButton = ({ text, onClick, children, to }: IProps) => {
   const commonClasses =
-    "inline-block bg-[#141414] border-[1px] border-[#525252] transition-all hover:bg-[#1D1B1B] hover:border-[#FFFFFF] text-white px-4 py-2 rounded-[7px] flex items-center justify-center cursor-pointer";
+    // "inline-block bg-[#141414] border-[1px] border-[#525252] transition-all hover:bg-[#1D1B1B] hover:border-[#FFFFFF] text-white px-4 py-2 rounded-[7px] flex items-center justify-center cursor-pointer";
+    " bg-[#141414] border-[1px] border-[#525252] transition-all hover:bg-[#1D1B1B] hover:border-[#FFFFFF] text-white px-4 py-2 rounded-[7px] flex items-center justify-center cursor-pointer";
 
   if (to) {
     return (

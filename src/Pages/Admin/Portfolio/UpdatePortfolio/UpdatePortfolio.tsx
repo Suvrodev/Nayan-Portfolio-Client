@@ -13,8 +13,8 @@ import { portfolioCategoriesDropDown } from "@/utils/Array/portfolioCategories";
 import { compressAndConvertToBase64 } from "@/components/convertToBase64/compressAndConvertToBase64";
 
 const UpdatePortfolio = () => {
-  const { title } = useParams();
-  const { data, isLoading } = useGetSinglePortfolioQuery(title);
+  const { id } = useParams();
+  const { data, isLoading } = useGetSinglePortfolioQuery(id);
   const [updatePortfolio] = useUpdatePortfolioMutation();
 
   const [imagePreview, setImagePreview] = useState<string>("");

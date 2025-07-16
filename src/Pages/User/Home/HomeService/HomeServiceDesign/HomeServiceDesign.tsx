@@ -1,8 +1,8 @@
-import type { TServcie } from "@/utils/types/globalTypes";
+import type { TService } from "@/utils/types/globalTypes";
 import "./HomeServiceDesign.css";
 
 interface IProps {
-  service: TServcie;
+  service: TService;
   idx: number;
 }
 

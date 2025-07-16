@@ -29,7 +29,7 @@ const Blog = ({ isAdmin }: IProps) => {
         <h1 className="text-4xl font-bold text-white">Blog</h1>
 
         <div className={`${isAdmin ? "" : "hidden"} mt-10`}>
-          <Link to={`/dashboard/blog/add-blog`}>
+          <Link to={`/admin-dashboard/blog/add-blog`}>
             <PrimaryButton text="Add Blog" />
           </Link>
         </div>

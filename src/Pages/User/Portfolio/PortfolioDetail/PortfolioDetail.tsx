@@ -4,8 +4,8 @@ import { useGetSinglePortfolioQuery } from "@/redux/features/portfolio/portfolio
 import { useParams } from "react-router";
 
 const PortfolioDetail = () => {
-  const { title } = useParams();
-  const { data, isLoading } = useGetSinglePortfolioQuery(title);
+  const { id } = useParams();
+  const { data, isLoading } = useGetSinglePortfolioQuery(id);
   const portfolio = data?.data;
   console.log("portfolio: ", portfolio);
 

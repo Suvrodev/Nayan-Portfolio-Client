@@ -30,7 +30,7 @@ const PortfolioBox = ({ portfolio, isAdmin }: IPortfolioBoxProps) => {
       {/* Admin Buttons */}
       {isAdmin && (
         <div className="absolute top-2 right-2 z-10 flex items-center gap-x-2">
-          <Link to={`update-portfolio/${portfolio?.title}`}>
+          <Link to={`update-portfolio/${portfolio?._id}`}>
             {" "}
             <UpdateButton />
           </Link>
@@ -48,7 +48,7 @@ const PortfolioBox = ({ portfolio, isAdmin }: IPortfolioBoxProps) => {
 
         {/* Overlay with button */}
         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-          <Link to={`/portfolio-detail/${portfolio?.title}`}>
+          <Link to={`/portfolio-detail/${portfolio?._id}`}>
             <PrimaryButton text="Read More" />
           </Link>
         </div>

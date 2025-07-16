@@ -10,10 +10,9 @@ interface IBlogCardProps {
   isAdmin: boolean;
 }
 const BlogCard = ({ blog, isAdmin }: IBlogCardProps) => {
-  isAdmin = false;
-  const { image, title, date, category } = blog;
+  const { _id, image, title, date, category } = blog;
   return (
-    <Link to={`/blog-detail/${blog.title}`}>
+    <Link to={`/blog-detail/${_id}`}>
       <div className="relative primaryBox rounded-[12px] overflow-hidden shadow-md hover:shadow-xl transition duration-300 flex flex-col h-[370px] md:h-[370px] lg:h-[380px]">
         {/* Admin Buttons */}
         {isAdmin && (

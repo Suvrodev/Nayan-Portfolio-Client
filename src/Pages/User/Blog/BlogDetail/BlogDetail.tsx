@@ -1,11 +1,12 @@
 import SmartImage from "@/components/SmartImage/SmartImage";
 import { useGetSingleBlogQuery } from "@/redux/features/blog/blogApi";
+import { formatDate } from "@/utils/Function/formatDate";
 import type { TBlog } from "@/utils/types/globalTypes";
 import { useParams } from "react-router";
 
 const BlogDetail = () => {
-  const { title } = useParams();
-  const { data, isLoading } = useGetSingleBlogQuery(title);
+  const { id } = useParams();
+  const { data, isLoading } = useGetSingleBlogQuery(id);
   const blog: TBlog = data?.data;
   console.log("Blog: ", blog);
 
@@ -24,7 +25,7 @@ const BlogDetail = () => {
       {/* Meta Info */}
       <div className="text-sm text-gray-400 mb-6 flex flex-col md:flex-row gap-2 md:gap-6">
         <p>✍️ Author: {blog.author}</p>
-        <p>📅 Date: {blog.date}</p>
+        <p>📅 Date: {formatDate(blog.date)}</p>
         <p>
           🏷️ Category: <span className="text-teal-400">{blog.category}</span>
         </p>
@@ -40,9 +41,14 @@ const BlogDetail = () => {
       </div>
 
       {/* Description */}
-      <div className="prose prose-invert max-w-none text-lg leading-relaxed text-gray-300">
+      {/* <div className="prose prose-invert max-w-none text-lg leading-relaxed text-gray-300">
         {blog.description}
-      </div>
+      </div> */}
+
+      <div
+        className="prose prose-invert max-w-none text-gray-300 leading-relaxed text-lg"
+        dangerouslySetInnerHTML={{ __html: blog.description }}
+      ></div>
     </div>
   );
 };
