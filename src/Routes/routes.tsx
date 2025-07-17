@@ -7,7 +7,6 @@ import About from "@/Pages/User/About/About";
 import ServiceDetail from "@/Pages/User/Service/WhatIDo/ServiceDetail/ServiceDetail";
 import Login from "@/Pages/AdminInterAction/Login/Login";
 import Registration from "@/Pages/AdminInterAction/Registration/Registration";
-import AdminDashboard from "@/Layout/AdminDashboard/AdminDashboard";
 import AdminHome from "@/Pages/Admin/AdminHome/AdminHome";
 import AdminProtectedRoute from "./ProtectedRoutes/AdminProtectedRoute";
 import TextEditor from "@/components/TextEditor/TextEditor";
@@ -20,6 +19,9 @@ import UpdateService from "@/Pages/Admin/Service/UpdateService/UpdateService";
 import AddPortfolio from "@/Pages/Admin/Portfolio/AddPortfolio/AddPortfolio";
 import UpdatePortfolio from "@/Pages/Admin/Portfolio/UpdatePortfolio/UpdatePortfolio";
 import AddBlog from "@/Pages/Admin/Blog/AddBlog/AddBlog";
+import UpdateBlog from "@/Pages/Admin/Blog/UpdateBlog/UpdateBlog";
+import AdminDashboard from "@/Layout/AdminDashboard/AdminDashboard";
+import AllAdmins from "@/Pages/Admin/AllAdmins/AllAdmins";
 
 export const router = createBrowserRouter([
   {
@@ -102,6 +104,14 @@ export const router = createBrowserRouter([
         element: <AdminHome />,
       },
       {
+        path: "all-admin",
+        element: (
+          <AdminProtectedRoute>
+            <AllAdmins />
+          </AdminProtectedRoute>
+        ),
+      },
+      {
         path: "service",
         element: (
           <AdminProtectedRoute>
@@ -169,7 +179,7 @@ export const router = createBrowserRouter([
         path: "blog/update-blog/:id",
         element: (
           <AdminProtectedRoute>
-            <UpdatePortfolio />
+            <UpdateBlog />
           </AdminProtectedRoute>
         ),
       },

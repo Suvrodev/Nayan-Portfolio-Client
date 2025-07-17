@@ -27,6 +27,26 @@ const blogApi = baseApi.injectEndpoints({
         };
       },
     }),
+    deleteBlog: builder.mutation({
+      query: (_id) => {
+        return {
+          url: `/blog/${_id}`,
+          method: "DELETE",
+        };
+      },
+      invalidatesTags: ["blog"],
+    }),
+    updateBlog: builder.mutation({
+      query: ({ _id, updatedData }) => {
+        console.log("Update portfolio data: ", updatedData);
+        return {
+          url: `/blog/update/${_id}`,
+          method: "PATCH",
+          body: updatedData,
+        };
+      },
+      invalidatesTags: ["blog"],
+    }),
   }),
 });
 
@@ -34,4 +54,6 @@ export const {
   useAddBlogMutation,
   useGetAllBlogsQuery,
   useGetSingleBlogQuery,
+  useDeleteBlogMutation,
+  useUpdateBlogMutation,
 } = blogApi;

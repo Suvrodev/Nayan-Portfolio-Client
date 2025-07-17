@@ -9,7 +9,7 @@ const BlogDetail = () => {
   const { id } = useParams();
   const { data, isLoading } = useGetSingleBlogQuery(id);
   const blog: TBlog = data?.data;
-  console.log("Blog: ", blog);
+  // console.log("Blog: ", blog);
 
   if (isLoading) {
     return <p className="text-center text-white py-10">Loading...</p>;

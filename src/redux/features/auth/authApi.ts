@@ -18,7 +18,44 @@ const authApi = baseApi.injectEndpoints({
         };
       },
     }),
+
+    getAllAdmin: builder.query({
+      query: () => {
+        return {
+          url: "/auth/all-admin",
+        };
+      },
+    }),
+    getSinglePortfolio: builder.query({
+      query: (id) => {
+        return {
+          url: `/portfolioo/${id}`,
+        };
+      },
+    }),
+    deletePortfolio: builder.mutation({
+      query: (_id) => {
+        return {
+          url: `/portfolioo/${_id}`,
+          method: "DELETE",
+        };
+      },
+    }),
+    updatePortfolio: builder.mutation({
+      query: ({ _id, updatedData }) => {
+        console.log("Update portfolio data: ", updatedData);
+        return {
+          url: `/portfolioo/${_id}`,
+          method: "PATCH",
+          body: updatedData,
+        };
+      },
+    }),
   }),
 });
 
-export const { useLoginMutation, useRegistrationMutation } = authApi;
+export const {
+  useLoginMutation,
+  useRegistrationMutation,
+  useGetAllAdminQuery,
+} = authApi;

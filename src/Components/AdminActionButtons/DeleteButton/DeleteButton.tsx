@@ -2,6 +2,7 @@ import { Trash2 } from "lucide-react";
 
 interface DeleteButtonProps {
   onClick?: () => void;
+  // onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const DeleteButton = ({ onClick }: DeleteButtonProps) => {

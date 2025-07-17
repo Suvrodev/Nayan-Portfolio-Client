@@ -9,11 +9,13 @@ import {
   FaGithub,
   FaLinkedin,
   FaPinterest,
+  FaChevronDown,
 } from "react-icons/fa";
 
 import { Link, useLocation } from "react-router";
 import goLink from "@/utils/Function/goLink";
 import { adminNavItems } from "@/utils/Array/navItems";
+import { useState } from "react";
 
 const socialLinks = [
   { icon: <FaFacebookF />, url: "https://www.facebook.com/sarkarnayans" },
@@ -30,8 +32,20 @@ const socialLinks = [
 const AdminHeader = () => {
   const location = useLocation()?.pathname;
   // console.log("Location: ", location);
+
+  // Inside AdminHeader component
+  const [openMenus, setOpenMenus] = useState<string[]>([]);
+
+  const toggleMenu = (label: string) => {
+    setOpenMenus((prev) =>
+      prev.includes(label)
+        ? prev.filter((item) => item !== label)
+        : [...prev, label]
+    );
+  };
   return (
-    <div className="bg-[#141414] h-[100vh] text-white pl-8 overflow-hidden sticky top-0 shadow-blue-400 shadow-md">
+    // <div className="bg-[#141414] min-h-screen text-white pl-8  sticky top-0 shadow-blue-400 shadow-md overflow-auto">
+    <div className="bg-[#141414] h-screen overflow-y-auto text-white pl-8 sticky top-0 shadow-blue-400 shadow-md">
       {/* Logo */}
       <div className="mt-20 mb-28">
         <Link to="/">
@@ -41,16 +55,54 @@ const AdminHeader = () => {
       </div>
 
       {/* Navigation */}
+
       <div className="flex flex-col gap-4 font-bold">
-        {adminNavItems.map((item) => (
-          <Link
-            key={item.path}
-            to={item.path}
-            className={` ${location == item?.path ? "text-green-500" : ""}`}
-          >
-            {item.label}
-          </Link>
-        ))}
+        {adminNavItems.map((item, index) =>
+          item.children ? (
+            <div key={index}>
+              <div
+                className="flex justify-between items-center cursor-pointer hover:text-green-500"
+                onClick={() => toggleMenu(item.label)}
+              >
+                <span>{item.label}</span>
+                <FaChevronDown
+                  className={`transition-transform duration-300 ${
+                    openMenus.includes(item.label) ? "rotate-180" : ""
+                  }`}
+                />
+              </div>
+              <div
+                className={`pl-4 flex flex-col gap-2 mt-2 transition-all overflow-hidden ${
+                  openMenus.includes(item.label) ? "max-h-[500px]" : "max-h-0"
+                }`}
+              >
+                {item.children.map((child) => (
+                  <Link
+                    key={child.path}
+                    to={child.path}
+                    className={`text-sm ${
+                      location === child.path
+                        ? "text-green-500"
+                        : "text-gray-300"
+                    } hover:text-green-400`}
+                  >
+                    {child.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`${
+                location === item.path ? "text-green-500" : "text-white"
+              } hover:text-green-400`}
+            >
+              {item.label}
+            </Link>
+          )
+        )}
       </div>
 
       {/* Social Icons */}
