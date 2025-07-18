@@ -22,6 +22,7 @@ import AddBlog from "@/Pages/Admin/Blog/AddBlog/AddBlog";
 import UpdateBlog from "@/Pages/Admin/Blog/UpdateBlog/UpdateBlog";
 import AdminDashboard from "@/Layout/AdminDashboard/AdminDashboard";
 import AllAdmins from "@/Pages/Admin/AllAdmins/AllAdmins";
+import Resume from "@/Pages/Admin/Resume/Resume";
 
 export const router = createBrowserRouter([
   {
@@ -108,6 +109,14 @@ export const router = createBrowserRouter([
         element: (
           <AdminProtectedRoute>
             <AllAdmins />
+          </AdminProtectedRoute>
+        ),
+      },
+      {
+        path: "resume",
+        element: (
+          <AdminProtectedRoute>
+            <Resume />
           </AdminProtectedRoute>
         ),
       },
