@@ -59,7 +59,7 @@ export type TAdmin = {
   lastName: string;
   email: string;
   role: string;
-  isBlocked: string;
+  isBlocked: boolean;
   phone: string;
   image: string;
 };

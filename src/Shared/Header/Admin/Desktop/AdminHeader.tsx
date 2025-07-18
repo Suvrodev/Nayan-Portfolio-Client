@@ -16,6 +16,7 @@ import { Link, useLocation } from "react-router";
 import goLink from "@/utils/Function/goLink";
 import { adminNavItems } from "@/utils/Array/navItems";
 import { useState } from "react";
+import Logout from "@/components/Logout/Logout";
 
 const socialLinks = [
   { icon: <FaFacebookF />, url: "https://www.facebook.com/sarkarnayans" },
@@ -103,6 +104,9 @@ const AdminHeader = () => {
             </Link>
           )
         )}
+      </div>
+      <div>
+        <Logout />
       </div>
 
       {/* Social Icons */}

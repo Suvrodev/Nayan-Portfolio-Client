@@ -25,31 +25,34 @@ const authApi = baseApi.injectEndpoints({
           url: "/auth/all-admin",
         };
       },
+      providesTags: ["admin"],
     }),
-    getSinglePortfolio: builder.query({
-      query: (id) => {
+    getSingleAdmin: builder.query({
+      query: (email) => {
         return {
-          url: `/portfolioo/${id}`,
+          url: `/auth/all-admin/${email}`,
         };
       },
     }),
-    deletePortfolio: builder.mutation({
-      query: (_id) => {
+    deleteAdmin: builder.mutation({
+      query: (email) => {
         return {
-          url: `/portfolioo/${_id}`,
+          url: `/auth/all-admin/${email}`,
           method: "DELETE",
         };
       },
+      invalidatesTags: ["admin"],
     }),
-    updatePortfolio: builder.mutation({
-      query: ({ _id, updatedData }) => {
-        console.log("Update portfolio data: ", updatedData);
+    updateAdmin: builder.mutation({
+      query: ({ email, updateData }) => {
+        console.log("Update Admin data: ", updateData);
         return {
-          url: `/portfolioo/${_id}`,
+          url: `/auth/all-admin/${email}`,
           method: "PATCH",
-          body: updatedData,
+          body: updateData,
         };
       },
+      invalidatesTags: ["admin"],
     }),
   }),
 });
@@ -58,4 +61,6 @@ export const {
   useLoginMutation,
   useRegistrationMutation,
   useGetAllAdminQuery,
+  useDeleteAdminMutation,
+  useUpdateAdminMutation,
 } = authApi;
