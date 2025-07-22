@@ -1,19 +1,20 @@
 import "./HomeButton.css";
-import samplePDF from "../../../../assets/CV/sample.pdf";
+// import samplePDF from "../../../../assets/CV/sample.pdf";
 import PrimaryButton from "@/components/PortfolioButton/PrimaryButton";
+import HomeDownloadCV from "./HomeDownloadCV/HomeDownloadCV";
 
 const HomeButton = () => {
-  const handleDownloadCV = () => {
-    const link = document.createElement("a");
-    // link.href = `${process.env.PUBLIC_URL}/sample.pdf`;
-    link.href = samplePDF;
-    link.download = "Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  // const handleDownloadCV = () => {
+  //   const link = document.createElement("a");
+  //   // link.href = `${process.env.PUBLIC_URL}/sample.pdf`;
+  //   link.href = samplePDF;
+  //   link.download = "Resume.pdf";
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
 
-    console.log("Download");
-  };
+  //   console.log("Download");
+  // };
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const goLink = (link: any) => {
@@ -24,10 +25,11 @@ const HomeButton = () => {
     <div>
       <div>
         <div className="flex gap-4 justify-center">
-          <PrimaryButton
+          {/* <PrimaryButton
             text="Download CV"
             onClick={() => handleDownloadCV()}
-          />
+          /> */}
+          <HomeDownloadCV />
 
           <PrimaryButton
             text="Fiver"

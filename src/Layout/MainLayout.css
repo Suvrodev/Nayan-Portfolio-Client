@@ -3,6 +3,22 @@
   border: 1px solid #525252;
   backdrop-filter: blur(200px);
 }
+.primaryButton {
+  background-color: #141414;
+  border: 1px solid #525252;
+  transition: all 0.3s ease; /* You can adjust the duration and timing */
+  color: white;
+  padding: 0.5rem 1rem; /* py-2 px-4 */
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.primaryButton:hover {
+  background-color: #1d1b1b;
+  border-color: #ffffff;
+}
 .pageTitle {
   font-size: 32px;
   color: white;

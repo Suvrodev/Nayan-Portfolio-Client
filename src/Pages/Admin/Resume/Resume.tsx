@@ -63,7 +63,8 @@ const Resume = () => {
         {/* File Input */}
         <div>
           <label className="block mb-1 font-semibold">
-            Select Resume (PDF)
+            Select Resume (PDF){" "}
+            <span className="text-[10px]">(Max Size: 5 mb)</span>
           </label>
           <input
             type="file"

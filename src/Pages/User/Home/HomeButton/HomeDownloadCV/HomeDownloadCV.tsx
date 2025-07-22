@@ -1,6 +1,6 @@
 import { useGetSingleResumeQuery } from "@/redux/features/resume/resumeApi";
 
-const LoadResume = () => {
+const HomeDownloadCV = () => {
   const { data, isLoading } = useGetSingleResumeQuery(undefined);
   const resume = data?.data;
 
@@ -29,34 +29,17 @@ const LoadResume = () => {
     URL.revokeObjectURL(url); // Clean up
   };
 
-  if (isLoading) {
-    return <p>Loadingg...</p>;
-  }
+  //   if (isLoading) {
+  //     return <p>Loadingg...</p>;
+  //   }
   return (
-    <div>
-      {/* Show Resume if exists */}
-      {resume?.resume && (
-        <div className="mt-8">
-          <h3 className="text-xl font-semibold mb-3">📄 Uploaded Resume</h3>
-
-          {/* PDF Preview */}
-          <iframe
-            src={resume.resume}
-            title="Uploaded Resume"
-            className="w-full h-[500px] border rounded"
-          ></iframe>
-
-          {/* Download Button */}
-          <button
-            onClick={() => handleDownload(resume.resume)}
-            className="inline-block mt-4 px-4 py-2 bg-green-600 hover:bg-green-700 rounded text-white font-medium"
-          >
-            ⬇️ Download Resume
-          </button>
-        </div>
-      )}
-    </div>
+    <button
+      onClick={() => handleDownload(resume.resume)}
+      className="primaryButton"
+    >
+      {isLoading ? <span>Loading...</span> : <span> Download CV</span>}
+    </button>
   );
 };
 
-export default LoadResume;
+export default HomeDownloadCV;

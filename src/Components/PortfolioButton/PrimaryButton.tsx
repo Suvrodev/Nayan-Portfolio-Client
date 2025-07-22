@@ -42,7 +42,7 @@ const PrimaryButton = ({ text, onClick, children, to }: IProps) => {
 
   return (
     <button className={commonClasses} onClick={onClick}>
-      <span className="text-[16px]">{text}</span>{" "}
+      <span className="text-[16px] text-center">{text}</span>{" "}
       <span className="ml-2">{children}</span>
     </button>
   );
